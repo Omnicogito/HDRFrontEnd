@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:800|Quicksand");
+header {
+  background: #3BA63B;
+}
+
+header .logo {
+  font-family: "Nanum+Gothic:800";
+  font-weight: bold;
+}
+
+header nav {
+  -ms-grid-column-align: right;
+      justify-self: right;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  float: left;
+}
+
+header nav ul li a {
+  padding: 1.5em;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+
+header nav ul li a:hover {
+  background: #c3eac3;
+}
+/*# sourceMappingURL=header.component.css.map */
