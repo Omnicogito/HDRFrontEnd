@@ -10,7 +10,14 @@ import { KennelComponent } from './components/kennel/kennel.component';
 import { DoggoComponent } from './components/doggo/doggo.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DoggoService } from './services/doggo.service';
-
+import { PersonIndexComponent } from './components/person/person-index/person-index.component';
+import {
+  MatToolbarModule,
+  MatButtonModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatTableModule
+} from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +26,13 @@ import { DoggoService } from './services/doggo.service';
     PersonComponent,
     KennelComponent,
     DoggoComponent,
-    RegisterComponent
+    RegisterComponent,
+    PersonIndexComponent,
+    MatToolbarModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule
   ],
   imports: [
     BrowserModule,
