@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { DoggoService } from '../../services/doggo.service';
+import { Doggo } from '../../models/doggo';
+import { MatTableDataSource } from '@angular/material';
+
 
 @Component({
   selector: 'app-doggo',
@@ -7,9 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoggoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private doggoService: DoggoService) { }
+
+  columnNames = [''];
+
+  dataSource: MatTableDataSource<Doggo>;
 
   ngOnInit() {
+    this.doggoService.getDoggos().subscribe((doggos: Doggo[]) => {});
   }
 
 }
