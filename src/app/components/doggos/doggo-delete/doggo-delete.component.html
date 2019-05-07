@@ -1,0 +1,34 @@
+<h1>Remove</h1>>
+<h4>Are you Super Sure you want to do this??</h4>
+
+<hr>
+<div *ngIf="doggo">
+  <div>
+    <label for="">Doggo ID</label>
+    <span>{{doggo.DoggoID}}</span>
+  </div>
+
+  <div>
+    <label for="">Name</label>
+    <span>{{doggo.Name}}</span>
+  </div>
+
+  <div>
+    <label for="">Breed</label>
+    <span>{{doggo.Breed}}</span>
+  </div>
+
+  <div>
+    <label for="">Human</label>
+    <span>{{doggo.HumanID}}</span>
+  </div>
+
+  <div>
+    <label for="">Image</label>
+    <span>{{doggo.Image}}</span>
+  </div>
+</div>
+
+
+<button mat-button color="warn" (click)="onDelete()">Remove</button>
+<button mat-button color="primary" routerLink="/doggo">Back to List</button>

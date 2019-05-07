@@ -13,12 +13,12 @@ export class PersonComponent implements OnInit {
 
   constructor(private _personService: PersonService) { }
 
-  columnNames = ['HumanId','FullName','Address','Phone','Email','DoggoName']
+  columnNames = ['HumanId', 'FullName', 'Address', 'Phone', 'Email', 'DoggoName'];
 
-  dataSource: MatTableDataSource<Person>
+  dataSource: MatTableDataSource<Person>;
 
   ngOnInit() {
-    this._personService.getPersons.subscribe((person: Person[]) => {
+    this._personService.getPersons().subscribe((person: Person[]) => {
       this.dataSource = new MatTableDataSource<Person>(person);
     });
   }
