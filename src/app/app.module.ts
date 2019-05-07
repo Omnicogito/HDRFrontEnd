@@ -18,6 +18,10 @@ import {
   MatInputModule,
   MatTableModule
 } from '@angular/material';
+import { PersonCreateComponent } from './components/person/person-create/person-create.component';
+import { PersonDetailComponent } from './components/person/person-detail/person-detail.component';
+import { PersonEditComponent } from './components/person/person-edit/person-edit.component';
+import { PersonDeleteComponent } from './components/person/person-delete/person-delete.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +36,11 @@ import {
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    PersonCreateComponent,
+    PersonDetailComponent,
+    PersonEditComponent,
+    PersonDeleteComponent
   ],
   imports: [
     BrowserModule,

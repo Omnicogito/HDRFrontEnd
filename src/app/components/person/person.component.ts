@@ -18,7 +18,7 @@ export class PersonComponent implements OnInit {
   dataSource: MatTableDataSource<Person>
 
   ngOnInit() {
-    this._personService.getPersons.subscribe((person: Person[]) => {
+    this._personService.getPersons().subscribe((person: Person[]) => {
       this.dataSource = new MatTableDataSource<Person>(person);
     });
   }
