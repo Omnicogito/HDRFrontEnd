@@ -1,0 +1,27 @@
+<h1>Details</h1>
+
+<hr>
+<div *ngIf="person">
+  <div>
+    <label for="">FullName:</label>
+    <span>{{person.FullName}}</span>
+  </div>
+  <div>
+    <label for="">Address:</label>
+    <span>{{person.Address}}</span>
+  </div>
+  <div>
+    <label for="">Phone:</label>
+    <span>{{person.Phone}}</span>
+  </div>
+  <div>
+    <label for="">Email:</label>
+    <span>{{person.Email}}</span>
+  </div>
+  <div>
+    <label for="">DoggoName:</label>
+    <span>{{person.DoggoName}}</span>
+  </div>
+</div>
+<button mat-button color="">Edit</button>
+<button mat-button color="" routerLink="/persons">Back To List</button>

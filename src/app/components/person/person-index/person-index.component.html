@@ -1,3 +1,27 @@
-<p>
-  person-index works!
-</p>
+<ng-container matColumnDef="FullName">
+    <mat-header-cell *matHeaderCellDef class="matColumnSize">First and Last Name</mat-header-cell>
+    <mat-cell *matCellDef="let person"><i class="material-icons">{{person.FullName}}</i></mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Address">
+    <mat-header-cell *matHeaderCellDef class="matColumnSize">Address</mat-header-cell>
+    <mat-cell *matCellDef="let person"><i class="material-icons">{{person.Address}}</i></mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Phone">
+    <mat-header-cell *matHeaderCellDef class="matColumnSize">Phone</mat-header-cell>
+    <mat-cell *matCellDef="let person"><i class="material-icons">{{person.Phone}}</i></mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Email">
+    <mat-header-cell *matHeaderCellDef class="matColumnSize">Email</mat-header-cell>
+    <mat-cell *matCellDef="let person"><i class="material-icons">{{person.Email}}</i></mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="DoggoName">
+    <mat-header-cell *matHeaderCellDef class="matColumnSize">Doggo Name</mat-header-cell>
+    <mat-cell *matCellDef="let person"><i class="material-icons">{{person.DoggoName}}</i></mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Edit">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let person">
+      <i class="material-icons" routerLink="/person/Edit/{{person.HumanId}}">Edit</i>
+    </mat-cell>
+  </ng-container>
+  

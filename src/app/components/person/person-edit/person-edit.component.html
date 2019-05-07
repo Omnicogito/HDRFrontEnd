@@ -1,0 +1,37 @@
+<h1>Edit a Person</h1>
+<hr>
+
+<div *ngIf="Person">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editPersonForm">
+    <div>
+      <div hidden>
+        <mat-form-field>
+          <input matInput placeholder="FullName" formControlName="FullName" type="Fullname" required [value]="Person.FullName"/>
+        </mat-form-field>
+      </div>
+      <div hidden>
+        <mat-form-field>
+          <input matInput placeholder="Address" formControlName="Address" type="Address" required [value]="Person.Address"/>
+        </mat-form-field>
+      </div>
+      <div hidden>
+        <mat-form-field>
+          <input matInput placeholder="Phone" formControlName="Phone" type="Phone" required [value]="Person.Phone"/>
+        </mat-form-field>
+      </div>
+      <div hidden>
+        <mat-form-field>
+          <input matInput placeholder="Email" formControlName="Email" type="Email" required [value]="Person.Email"/>
+        </mat-form-field>
+      </div>
+      <div hidden>
+        <mat-form-field>
+          <input matInput placeholder="DoggoName" formControlName="DoggoName" type="DoggoName" required [value]="Person.DoggoName"/>
+        </mat-form-field>
+      </div>
+    </div>
+    <button mat-raised-button class="nav-btn" color="" type="submit">Save</button>
+  </form>
+</div>
+
+<a mat-button routerLink="/Person">Back to List</a>

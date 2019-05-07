@@ -17,6 +17,10 @@ import {
   MatInputModule,
   MatTableModule
 } from '@angular/material';
+import { PersonCreateComponent } from './components/person/person-create/person-create.component';
+import { PersonDetailComponent } from './components/person/person-detail/person-detail.component';
+import { PersonEditComponent } from './components/person/person-edit/person-edit.component';
+import { PersonDeleteComponent } from './components/person/person-delete/person-delete.component';
 import { DoggoCreateComponent } from './components/doggos/doggo-create/doggo-create.component';
 import { DoggoDetailComponent } from './components/doggos/doggo-detail/doggo-detail.component';
 import { DoggoEditComponent } from './components/doggos/doggo-edit/doggo-edit.component';
@@ -43,7 +47,11 @@ import { DoggoDeleteComponent } from './components/doggos/doggo-delete/doggo-del
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    PersonCreateComponent,
+    PersonDetailComponent,
+    PersonEditComponent,
+    PersonDeleteComponent
   ],
   providers: [
     DoggoService,
