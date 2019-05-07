@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./person.component.scss']
 })
 export class PersonComponent implements OnInit {
-
+  
   constructor(private _personService: PersonService) { }
 
   columnNames = ['HumanId', 'FullName', 'Address', 'Phone', 'Email', 'DoggoName'];

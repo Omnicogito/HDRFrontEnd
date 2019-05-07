@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonService } from 'src/app/services/person.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Person } from 'src/app/models/person';
 
 @Component({
   selector: 'app-person-delete',
@@ -8,10 +9,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./person-delete.component.scss']
 })
 export class PersonDeleteComponent implements OnInit {
+  person: Person;
 
   constructor(private _personService: PersonService, private _ar: ActivatedRoute, private _router: Router) {
     this._ar.paramMap.subscribe(p => {
-      this._personService.getPersons(p.get('id')).subscribe((singlePerson: Person) => {
+      this._personService.getPerson(p.get('id')).subscribe((singlePerson: Person) => {
         this.person = singlePerson;
       });
     });
@@ -20,7 +22,7 @@ export class PersonDeleteComponent implements OnInit {
   ngOnInit() {
   }
 onDelete(){
-  this._personService.deletePerson(this.person.FullName).subscribe(() => {
+  this._personService.deletePerson(this.person.HumanId).subscribe(() => {
     this._router.navigate(['/person']);
   });
 }

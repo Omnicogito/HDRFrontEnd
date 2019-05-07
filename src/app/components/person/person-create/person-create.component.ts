@@ -20,11 +20,11 @@ export class PersonCreateComponent implements OnInit {
 
   createForm(){
     this.personForm = this._form.group({
-      FullName: new FormControl,
-      Address: new FormControl,
-      Phone: new FormControl,
-      Email: new FormControl,
-      DoggoName: new FormControl
+      FullName: new FormControl(),
+      Address: new FormControl(),
+      Phone: new FormControl(),
+      Email: new FormControl(),
+      DoggoName: new FormControl()
     });
   }
 

@@ -20,7 +20,7 @@ export class PersonEditComponent implements OnInit {
     private _router: Router) {
 
     this._ar.paramMap.subscribe(p => {
-      this._personService.getPersons(p.get('id')).subscribe((singlePerson: Person) => {
+      this._personService.getPerson(p.get('id')).subscribe((singlePerson: Person) => {
         this.person = singlePerson;
         this.createForm();
       });

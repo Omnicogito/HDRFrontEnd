@@ -15,7 +15,7 @@ export class PersonDetailComponent implements OnInit {
   
   ngOnInit() {
     this._activatedRoute.paramMap.subscribe(routeData => {
-      this._personService.getPersons(routeData.get('id')).subscribe((singlePerson: Person) => {
+      this._personService.getPerson(routeData.get('id')).subscribe((singlePerson: Person) => {
         this.person = singlePerson;
       });
       console.log(routeData);
