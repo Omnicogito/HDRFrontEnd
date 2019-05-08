@@ -15,12 +15,12 @@ export class DoggoService {
     return this.http.get(`${ApiUrl}/Doggo` , { headers: this.getHeaders() });
   }
 
-  createDoggo(doggo: Doggo) {
-    return this.http.post(`${ApiUrl}/Doggos`, doggo, {headers: this.getHeaders()});
-  }
-
   getDoggo(id: string) {
     return this.http.get(`${ApiUrl}/Doggos/${id}` , {headers: this.getHeaders() });
+  }
+
+  createDoggo(doggo: Doggo) {
+    return this.http.post(`${ApiUrl}/Doggos`, doggo, {headers: this.getHeaders()});
   }
 
   updateDoggo(doggo: Doggo) {
