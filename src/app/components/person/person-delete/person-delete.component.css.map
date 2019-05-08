@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "person-delete.component.scss"
+    ],
+    "names": [],
+    "file": "person-delete.component.css"
+}
