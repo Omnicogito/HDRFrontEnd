@@ -6,7 +6,8 @@
   <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
-  <ng-container matColumnDef="FullName">
+
+    <ng-container matColumnDef="FullName">
     <mat-header-cell *matHeaderCellDef class="matColumnSize">First and Last Name</mat-header-cell>
     <mat-cell *matCellDef="let person"><i class="material-icons">{{person.FullName}}</i></mat-cell>
   </ng-container>

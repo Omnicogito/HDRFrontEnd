@@ -33,7 +33,7 @@ export class DoggoEditComponent implements OnInit {
   createForm() {
     this.editDoggoForm = this.form.group({
       DoggoID: new FormControl(this.doggo.DoggoID),
-      Name: new FormControl(this.doggo.Name),
+      DoggoName: new FormControl(this.doggo.DoggoName),
       Breed: new FormControl(this.doggo.Breed),
       Size: new FormControl(this.doggo.Size),
       HumanID: new FormControl(this.doggo.HumanID),
@@ -48,7 +48,7 @@ export class DoggoEditComponent implements OnInit {
   onSubmit(form) {
     const updateDoggo: Doggo = {
       DoggoID: form.value.DoggoID,
-      Name: form.value.Name,
+      DoggoName: form.value.DoggoName,
       Breed: form.value.Breed,
       Size: form.value.Size,
       HumanID: form.value.HumanID,

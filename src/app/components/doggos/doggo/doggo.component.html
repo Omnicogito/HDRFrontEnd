@@ -13,9 +13,9 @@
           class='material-icons'>library_books</i></mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef='Name'>
+    <ng-container matColumnDef='DoggoName'>
       <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-      <mat-cell *matCellDef='let note'> {{doggo.Name}} </mat-cell>
+      <mat-cell *matCellDef='let note'> {{doggo.DoggoName}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef='Breed'>
@@ -28,7 +28,7 @@
       <mat-cell *matCellDef='let note'> {{doggo.Size}} </mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef='Human'>
+    <ng-container matColumnDef='HumanID'>
       <mat-header-cell *matHeaderCellDef> Human </mat-header-cell>
       <mat-cell *matCellDef='let note'> {{doggo.HumanID}} </mat-cell>
     </ng-container>

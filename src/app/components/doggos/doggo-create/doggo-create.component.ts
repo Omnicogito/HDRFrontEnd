@@ -21,7 +21,7 @@ export class DoggoCreateComponent implements OnInit {
 
   createForm() {
     this.doggoForm = this.form.group({
-      Name: new FormControl(),
+      DoggoName: new FormControl(),
       Breed: new FormControl(),
       Size: new FormControl(),
       HumanID: new FormControl(),
