@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PersonComponent } from './components/person/person.component';
 import { DoggoComponent } from './components/doggos/doggo/doggo.component';
-import { KennelComponent } from './components/kennel/kennel.component';
+import { KennelComponent } from './components/kennels/kennel/kennel.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DoggoCreateComponent } from './components/doggos/doggo-create/doggo-create.component';
 import { DoggoDetailComponent } from './components/doggos/doggo-detail/doggo-detail.component';
