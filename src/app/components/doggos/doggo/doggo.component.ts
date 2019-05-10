@@ -13,7 +13,7 @@ export class DoggoComponent implements OnInit {
 
   constructor(private doggoService: DoggoService) { }
 
-  columnNames = ['DoggoName' , 'Breed' , 'Size' , 'HumanID' , 'DoggoFriendly' , 'PeopleFriendly' , 'SpecialNeeds' , 'Age' , 'Image'];
+  columnNames = ['details','DoggoName' , 'Breed' , 'Size' , 'HumanID' , 'DoggoFriendly' , 'PeopleFriendly' , 'SpecialNeeds' , 'Age' , 'Image', 'buttons'];
 
   dataSource: MatTableDataSource<Doggo>;
 

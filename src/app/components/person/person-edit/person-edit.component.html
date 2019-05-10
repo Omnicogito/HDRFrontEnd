@@ -1,32 +1,38 @@
 <h1>Edit a Person</h1>
 <hr>
 
-<div *ngIf="Person">
+<div *ngIf="person">
   <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editPersonForm">
     <div>
-      <div hidden>
+      <div>
         <mat-form-field>
-          <input matInput placeholder="FullName" formControlName="FullName" type="Fullname" required [value]="Person.FullName"/>
+          <input matInput placeholder="HumanID" formControlName="HumanID" type="HumanID" required [value]="person.HumanID"/>
         </mat-form-field>
       </div>
-      <div hidden>
+      
+      <div>
         <mat-form-field>
-          <input matInput placeholder="Address" formControlName="Address" type="Address" required [value]="Person.Address"/>
+          <input matInput placeholder="FullName" formControlName="FullName" type="Fullname" required [value]="person.FullName"/>
         </mat-form-field>
       </div>
-      <div hidden>
+      <div>
         <mat-form-field>
-          <input matInput placeholder="Phone" formControlName="Phone" type="Phone" required [value]="Person.Phone"/>
+          <input matInput placeholder="Address" formControlName="Address" type="Address" required [value]="person.Address"/>
         </mat-form-field>
       </div>
-      <div hidden>
+      <div>
         <mat-form-field>
-          <input matInput placeholder="Email" formControlName="Email" type="Email" required [value]="Person.Email"/>
+          <input matInput placeholder="Phone" formControlName="Phone" type="Phone" required [value]="person.Phone"/>
         </mat-form-field>
       </div>
-      <div hidden>
+      <div>
         <mat-form-field>
-          <input matInput placeholder="DoggoName" formControlName="DoggoName" type="DoggoName" required [value]="Person.DoggoName"/>
+          <input matInput placeholder="Email" formControlName="Email" type="Email" required [value]="person.Email"/>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="DoggoName" formControlName="DoggoName" type="DoggoName" required [value]="person.DoggoName"/>
         </mat-form-field>
       </div>
     </div>
@@ -34,4 +40,4 @@
   </form>
 </div>
 
-<a mat-button routerLink="/Person">Back to List</a>
+<a mat-button routerLink="/person">Back to List</a>

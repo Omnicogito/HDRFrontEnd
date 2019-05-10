@@ -59,7 +59,7 @@ export class DoggoEditComponent implements OnInit {
       Image: form.value.Image
     };
     this.doggoService.updateDoggo(updateDoggo).subscribe(d => {
-      this.router.navigate(['/doggos']);
+      this.router.navigate(['/doggo']);
     });
   }
 

@@ -21,6 +21,7 @@ import { DoggoEditComponent } from './components/doggos/doggo-edit/doggo-edit.co
 import { DoggoDeleteComponent } from './components/doggos/doggo-delete/doggo-delete.component';
 import { DoggoService } from './services/doggo.service';
 import { PersonService } from './services/person.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +52,7 @@ import { PersonService } from './services/person.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     DoggoService,

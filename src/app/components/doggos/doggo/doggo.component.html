@@ -1,6 +1,6 @@
 <h1>Index</h1>
 
-<a mat-raised-button>Register New Doggo!!!!</a>
+<a mat-raised-button color="primary" routerLink='/doggo/create'>Register New Doggo!!!!</a>
 <hr>
 <div>
   <mat-table #table [dataSource]="dataSource">
@@ -9,59 +9,59 @@
 
     <ng-container matColumnDef='details'>
       <mat-header-cell *matHeaderCellDef class='matColumnSize'></mat-header-cell>
-      <mat-cell *matCellDef='let note' routerLink='/doggos/detail/{{doggo.DoggoID}}'><i
+      <mat-cell *matCellDef='let doggo' routerLink='/doggo/detail/{{doggo.DoggoID}}'><i
           class='material-icons'>library_books</i></mat-cell>
     </ng-container>
 
     <ng-container matColumnDef='DoggoName'>
       <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-      <mat-cell *matCellDef='let note'> {{doggo.DoggoName}} </mat-cell>
+      <mat-cell *matCellDef='let doggo'> {{doggo.DoggoName}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef='Breed'>
       <mat-header-cell *matHeaderCellDef> Breed </mat-header-cell>
-      <mat-cell *matCellDef='let note'> {{doggo.Breed}} </mat-cell>
+      <mat-cell *matCellDef='let doggo'> {{doggo.Breed}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef='Size'>
       <mat-header-cell *matHeaderCellDef> Size </mat-header-cell>
-      <mat-cell *matCellDef='let note'> {{doggo.Size}} </mat-cell>
+      <mat-cell *matCellDef='let doggo'> {{doggo.Size}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef='HumanID'>
       <mat-header-cell *matHeaderCellDef> Human </mat-header-cell>
-      <mat-cell *matCellDef='let note'> {{doggo.HumanID}} </mat-cell>
+      <mat-cell *matCellDef='let doggo'> {{doggo.HumanID}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef='DoggoFriendly'>
       <mat-header-cell *matHeaderCellDef> Doggo Friendly </mat-header-cell>
-      <mat-cell *matCellDef='let note'> {{doggo.DoggoFriendly}} </mat-cell>
+      <mat-cell *matCellDef='let doggo'> {{doggo.DoggoFriendly}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef='PeopleFriendly'>
       <mat-header-cell *matHeaderCellDef> People Friendly </mat-header-cell>
-      <mat-cell *matCellDef='let note'> {{doggo.PeopleFriendly}} </mat-cell>
+      <mat-cell *matCellDef='let doggo'> {{doggo.PeopleFriendly}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef='SpecialNeeds'>
       <mat-header-cell *matHeaderCellDef> SpecialNeeds </mat-header-cell>
-      <mat-cell *matCellDef='let note'> {{doggo.SpecialNeeds}} </mat-cell>
+      <mat-cell *matCellDef='let doggo'> {{doggo.SpecialNeeds}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef='Age'>
       <mat-header-cell *matHeaderCellDef> Age </mat-header-cell>
-      <mat-cell *matCellDef='let note'> {{doggo.Age}} </mat-cell>
+      <mat-cell *matCellDef='let doggo'> {{doggo.Age}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef='Image'>
       <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
-      <mat-cell *matCellDef='let note'> {{doggo.Image}} </mat-cell>
+      <mat-cell *matCellDef='let doggo'> {{doggo.Image}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="buttons">
       <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-      <mat-cell *matCellDef="let note">
-        <i mat-icon class="material-icons" routerLink="/doggo/edit/{{doggo.DoggoID}}">edit</i>
+      <mat-cell *matCellDef="let doggo">
+        <i class="material-icons" routerLink="/doggo/edit/{{doggo.DoggoID}}">edit</i>
         <i class="material-icons" routerLink="/doggo/delete/{{doggo.DoggoID}}">delete</i>
       </mat-cell>
     </ng-container>
