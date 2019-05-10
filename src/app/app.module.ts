@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { PersonComponent } from './components/person/person.component';
-import { KennelComponent } from './components/kennel/kennel.component';
+import { KennelComponent } from './components/kennels/kennel/kennel.component';
 import { DoggoComponent } from './components/doggos/doggo/doggo.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DoggoService } from './services/doggo.service';
