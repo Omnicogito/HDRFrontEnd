@@ -1,30 +1,39 @@
 <h1>Index</h1>
-<a mat-raised-button color="">Create New</a>
+<a mat-raised-button color="primary" routerLink='/person/create'>Create New</a>
 <hr>
 
 <div>
   <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
-  <ng-container matColumnDef="FullName">
+
+    <ng-container matColumnDef="FullName">
     <mat-header-cell *matHeaderCellDef class="matColumnSize">First and Last Name</mat-header-cell>
-    <mat-cell *matCellDef="let person"><i class="material-icons">{{person.FullName}}</i></mat-cell>
+    <mat-cell *matCellDef="let person">{{person.FullName}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="Address">
     <mat-header-cell *matHeaderCellDef class="matColumnSize">Address</mat-header-cell>
-    <mat-cell *matCellDef="let person"><i class="material-icons">{{person.Address}}</i></mat-cell>
+    <mat-cell *matCellDef="let person">{{person.Address}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="Phone">
     <mat-header-cell *matHeaderCellDef class="matColumnSize">Phone</mat-header-cell>
-    <mat-cell *matCellDef="let person"><i class="material-icons">{{person.Phone}}</i></mat-cell>
+    <mat-cell *matCellDef="let person">{{person.Phone}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="Email">
     <mat-header-cell *matHeaderCellDef class="matColumnSize">Email</mat-header-cell>
-    <mat-cell *matCellDef="let person"><i class="material-icons">{{person.Email}}</i></mat-cell>
+    <mat-cell *matCellDef="let person">{{person.Email}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="DoggoName">
     <mat-header-cell *matHeaderCellDef class="matColumnSize">Doggo Name</mat-header-cell>
-    <mat-cell *matCellDef="let person"><i class="material-icons">{{person.DoggoName}}</i></mat-cell>
+    <mat-cell *matCellDef="let person">{{person.DoggoName}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="buttons">
+    <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+    <mat-cell *matCellDef="let person">
+      <i class="material-icons" routerLink="/person/edit/{{person.HumanID}}">edit</i>
+      <i class="material-icons" routerLink="/person/delete/{{person.HumanID}}">delete</i>
+    </mat-cell>
   </ng-container>
   </mat-table>
 </div>

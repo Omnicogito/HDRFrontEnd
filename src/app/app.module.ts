@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
@@ -20,6 +21,7 @@ import { DoggoEditComponent } from './components/doggos/doggo-edit/doggo-edit.co
 import { DoggoDeleteComponent } from './components/doggos/doggo-delete/doggo-delete.component';
 import { DoggoService } from './services/doggo.service';
 import { PersonService } from './services/person.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +50,9 @@ import { PersonService } from './services/person.service';
     MatInputModule,
     MatTableModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     DoggoService,

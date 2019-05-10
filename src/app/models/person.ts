@@ -4,5 +4,5 @@ export interface Person {
     Address: string;
     Phone: string;
     Email: string;
-    DoggoNames: string;
+    DoggoName: string;
 }

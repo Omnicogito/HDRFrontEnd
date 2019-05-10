@@ -14,13 +14,13 @@ export class PersonEditComponent implements OnInit {
   person: Person;
 
   editPersonForm: FormGroup;
-  constructor(private _form: FormBuilder,
-    private _personService: PersonService,
-    private _ar: ActivatedRoute,
-    private _router: Router) {
+  constructor(private form: FormBuilder,
+              private personService: PersonService,
+              private ar: ActivatedRoute,
+              private router: Router) {
 
-    this._ar.paramMap.subscribe(p => {
-      this._personService.getPerson(p.get('id')).subscribe((singlePerson: Person) => {
+    this.ar.paramMap.subscribe(p => {
+      this.personService.getPerson(p.get('id')).subscribe((singlePerson: Person) => {
         this.person = singlePerson;
         this.createForm();
       });
@@ -30,25 +30,27 @@ export class PersonEditComponent implements OnInit {
   ngOnInit() {
   }
 
-  createForm(){
-    this.editPersonForm = this._form.group({
+  createForm() {
+    this.editPersonForm = this.form.group({
+      HumanID: new FormControl(this.person.HumanId),
       FullName: new FormControl(this.person.FullName),
       Address: new FormControl(this.person.Address),
       Phone: new FormControl(this.person.Phone),
       Email: new FormControl(this.person.Phone),
-      DoggoName: new FormControl(this.person.DoggoNames)
+      DoggoName: new FormControl(this.person.DoggoName)
     });
   }
-  onSubmit(form){
+  onSubmit(form) {
     const updatePerson: Person = {
+      HumanId: form.value.HumanID,
       FullName: form.value.FullName,
       Address: form.value.Address,
       Phone: form.value.Phone,
       Email: form.value.Email,
-      DoggoNames: form.value.DoggoName
+      DoggoName: form.value.DoggoName
     };
-    this._personService.updatePerson(updatePerson).subscribe(d => {
-      this._router.navigate(['/person']);
+    this.personService.updatePerson(updatePerson).subscribe(d => {
+      this.router.navigate(['/person']);
     });
   }
 }

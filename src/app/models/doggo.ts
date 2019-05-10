@@ -1,6 +1,6 @@
 export interface Doggo {
     DoggoID?: number;
-    Name: string;
+    DoggoName: string;
     Breed: string;
     Size: string;
     HumanID: string;

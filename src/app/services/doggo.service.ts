@@ -16,15 +16,15 @@ export class DoggoService {
   }
 
   getDoggo(id: string) {
-    return this.http.get(`${ApiUrl}/Doggos/${id}` , {headers: this.getHeaders() });
+    return this.http.get(`${ApiUrl}/Doggo/${id}` , {headers: this.getHeaders() });
   }
 
   createDoggo(doggo: Doggo) {
-    return this.http.post(`${ApiUrl}/Doggos`, doggo, {headers: this.getHeaders()});
+    return this.http.post(`${ApiUrl}/Doggo`, doggo, {headers: this.getHeaders()});
   }
 
   updateDoggo(doggo: Doggo) {
-    return this.http.put(`${ApiUrl}/Doggos` , doggo, { headers: this.getHeaders() });
+    return this.http.put(`${ApiUrl}/Doggo` , doggo, { headers: this.getHeaders() });
   }
 
   removeDoggo( id: number) {
