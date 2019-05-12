@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { KennelService } from 'src/app/services/kennel.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Kennel } from 'src/app/models/kennel';
 
 @Component({
   selector: 'app-kennel-delete',
@@ -7,8 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KennelDeleteComponent implements OnInit {
 
-  constructor() { }
+  kennel: Kennel;
 
+  constructor(private kennelService: KennelService, private ar: ActivatedRoute, private router: Router) {
+    this.ar.paramMap.subscribe(p => {
+      this.kennelService.getKennel(p.get('id')).subscribe((singleKennel: Kennel) => {
+        this.kennel = singleKennel;
+      });
+    });
+  }
+
+  onDelete(){
+    this.kennelService.removeKennel(this.kennel.KennelID).subscribe(() => {
+      this.router.navigate(['/kennel']);
+    });
+  }
   ngOnInit() {
   }
 

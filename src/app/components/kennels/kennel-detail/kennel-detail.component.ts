@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Kennel } from 'src/app/models/kennel';
+import { ActivatedRoute, RouterPreloader } from '@angular/router';
+import { KennelService } from 'src/app/services/kennel.service';
 
 @Component({
   selector: 'app-kennel-detail',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KennelDetailComponent implements OnInit {
 
-  constructor() { }
+  kennel: Kennel;
+
+  constructor(private activatedRoute: ActivatedRoute, private kennelService: KennelService) { }
 
   ngOnInit() {
+    this.activatedRoute.paramMap.subscribe(routeData => {
+      this.kennelService.getKennel(routeData.get('id')).subscribe((singleKennel: Kennel) => {this.kennel = singleKennel});
+    });
   }
 
 }
