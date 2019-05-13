@@ -13,10 +13,14 @@ import { PersonCreateComponent } from './components/person/person-create/person-
 import { PersonEditComponent } from './components/person/person-edit/person-edit.component';
 import { PersonDetailComponent } from './components/person/person-detail/person-detail.component';
 import { PersonDeleteComponent } from './components/person/person-delete/person-delete.component';
+import { KennelCreateComponent } from './components/kennels/kennel-create/kennel-create.component';
+import { KennelDetailComponent } from './components/kennels/kennel-detail/kennel-detail.component';
+import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edit.component';
+import { KennelDeleteComponent } from './components/kennels/kennel-delete/kennel-delete.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'person', children:[
+  {path: 'human', children: [
     { path: '', component: PersonComponent },
     { path: 'create', component: PersonCreateComponent},
     { path: 'edit/:id', component: PersonEditComponent},
@@ -31,7 +35,14 @@ const routes: Routes = [
     { path: 'edit/:id', component: DoggoEditComponent},
     { path: 'delete/:id', component: DoggoDeleteComponent}
   ]},
-  {path: 'kennel', component: KennelComponent},
+
+  {path: 'kennel', children: [
+    { path: '', component: KennelComponent },
+    { path: 'create', component: KennelCreateComponent},
+    { path: 'detail/:id', component: KennelDetailComponent},
+    { path: 'edit/:id', component: KennelEditComponent},
+    { path: 'delete/:id', component: KennelDeleteComponent}
+  ]},
   {path: 'register', component: RegisterComponent},
   {path: '', component: HomeComponent}
 ];

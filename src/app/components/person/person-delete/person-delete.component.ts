@@ -11,9 +11,9 @@ import { Person } from 'src/app/models/person';
 export class PersonDeleteComponent implements OnInit {
   person: Person;
 
-  constructor(private _personService: PersonService, private _ar: ActivatedRoute, private _router: Router) {
-    this._ar.paramMap.subscribe(p => {
-      this._personService.getPerson(p.get('id')).subscribe((singlePerson: Person) => {
+  constructor(private personService: PersonService, private ar: ActivatedRoute, private router: Router) {
+    this.ar.paramMap.subscribe(p => {
+      this.personService.getPerson(p.get('id')).subscribe((singlePerson: Person) => {
         this.person = singlePerson;
       });
     });
@@ -21,9 +21,9 @@ export class PersonDeleteComponent implements OnInit {
 
   ngOnInit() {
   }
-onDelete(){
-  this._personService.deletePerson(this.person.HumanId).subscribe(() => {
-    this._router.navigate(['/person']);
+onDelete() {
+  this.personService.deletePerson(this.person.HumanId).subscribe(() => {
+    this.router.navigate(['/human']);
   });
 }
 }

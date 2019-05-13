@@ -7,33 +7,38 @@
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
+    <ng-container matColumnDef='details'>
+      <mat-header-cell *matHeaderCellDef class='matColumnSize'></mat-header-cell>
+      <mat-cell *matCellDef='let person' routerLink='/human/detail/{{person.HumanId}}'><i
+          class='material-icons'>library_books</i></mat-cell>
+    </ng-container>
     <ng-container matColumnDef="FullName">
-    <mat-header-cell *matHeaderCellDef class="matColumnSize">First and Last Name</mat-header-cell>
-    <mat-cell *matCellDef="let person">{{person.FullName}}</mat-cell>
-  </ng-container>
-  <ng-container matColumnDef="Address">
-    <mat-header-cell *matHeaderCellDef class="matColumnSize">Address</mat-header-cell>
-    <mat-cell *matCellDef="let person">{{person.Address}}</mat-cell>
-  </ng-container>
-  <ng-container matColumnDef="Phone">
-    <mat-header-cell *matHeaderCellDef class="matColumnSize">Phone</mat-header-cell>
-    <mat-cell *matCellDef="let person">{{person.Phone}}</mat-cell>
-  </ng-container>
-  <ng-container matColumnDef="Email">
-    <mat-header-cell *matHeaderCellDef class="matColumnSize">Email</mat-header-cell>
-    <mat-cell *matCellDef="let person">{{person.Email}}</mat-cell>
-  </ng-container>
-  <ng-container matColumnDef="DoggoName">
-    <mat-header-cell *matHeaderCellDef class="matColumnSize">Doggo Name</mat-header-cell>
-    <mat-cell *matCellDef="let person">{{person.DoggoName}}</mat-cell>
-  </ng-container>
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">First and Last Name</mat-header-cell>
+      <mat-cell *matCellDef="let person">{{person.FullName}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Address">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Address</mat-header-cell>
+      <mat-cell *matCellDef="let person">{{person.Address}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Phone">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Phone</mat-header-cell>
+      <mat-cell *matCellDef="let person">{{person.Phone}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Email">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Email</mat-header-cell>
+      <mat-cell *matCellDef="let person">{{person.Email}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="DoggoName">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Doggo Name</mat-header-cell>
+      <mat-cell *matCellDef="let person">{{person.DoggoName}}</mat-cell>
+    </ng-container>
 
-  <ng-container matColumnDef="buttons">
-    <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-    <mat-cell *matCellDef="let person">
-      <i class="material-icons" routerLink="/person/edit/{{person.HumanID}}">edit</i>
-      <i class="material-icons" routerLink="/person/delete/{{person.HumanID}}">delete</i>
-    </mat-cell>
-  </ng-container>
+    <ng-container matColumnDef="buttons">
+      <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+      <mat-cell *matCellDef="let person">
+        <i class="material-icons" routerLink="/human/edit/{{person.HumanID}}">edit</i>
+        <i class="material-icons" routerLink="/human/delete/{{person.HumanID}}">delete</i>
+      </mat-cell>
+    </ng-container>
   </mat-table>
 </div>

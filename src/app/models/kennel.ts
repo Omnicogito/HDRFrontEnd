@@ -1,10 +1,10 @@
 export interface Kennel {
     KennelID?: number;
-    KennelNubmer: number;
+    KennelNumber: number;
     Size: string;
     Occupied: boolean;
     DoggoID: string;
     DoggoName: string;
-    HumanID: string;
+    //HumanID: string;
     FullName: string;
 }
