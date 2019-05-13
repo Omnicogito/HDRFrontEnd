@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { KennelService } from 'src/app/services/kennel.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-kennel-create',
@@ -22,8 +23,6 @@ export class KennelCreateComponent implements OnInit {
       KennelNumber: new FormControl(),
       Size: new FormControl(),
       Occupied: new FormControl(),
-      DoggoName: new FormControl(),
-      FullName: new FormControl()
     });
   }
 

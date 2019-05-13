@@ -18,9 +18,17 @@
       <mat-header-cell *matHeaderCellDef class="matColumnSize">Is this kennel taken?</mat-header-cell>
       <mat-cell *matCellDef="let Kennel"> {{kennel.Occupied}} </mat-cell>
     </ng-container>
+    <ng-container matColumnDef="DoggoID">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Doggo ID</mat-header-cell>
+      <mat-cell *matCellDef="let Kennel"> {{kennel.DoggoID}}</mat-cell>
+    </ng-container>
     <ng-container matColumnDef="DoggoName">
       <mat-header-cell *matHeaderCellDef class="matColumnSize">Name of Doggo</mat-header-cell>
       <mat-cell *matCellDef="let Kennel"> {{kennel.DoggoName}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="HumanID">
+      <mat-header-cell *matColumnDef class="matColumnSize">Human ID</mat-header-cell>
+      <mat-cell *matCellDef="let Kennel"> {{kennel.HumanID}} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="FullName">
       <mat-header-cell *matHeaderCellDef class="matColumnSize">First and Last Name of Owner</mat-header-cell>
