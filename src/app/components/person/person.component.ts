@@ -12,7 +12,7 @@ export class PersonComponent implements OnInit {
 
   constructor(private personService: PersonService) { }
 
-  columnNames = [ 'FullName', 'Address', 'Phone', 'Email', 'DoggoName', 'buttons'];
+  columnNames = [ 'details', 'FullName', 'Address', 'Phone', 'Email', 'DoggoName', 'buttons'];
 
   dataSource: MatTableDataSource<Person>;
 

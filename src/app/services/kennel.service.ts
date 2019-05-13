@@ -1,5 +1,5 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from 'selenium-webdriver/http';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { Kennel } from '../models/kennel';
 
@@ -25,7 +25,7 @@ export class KennelService {
         return this.http.put(`${ApiUrl}/Kennel` , kennel, { headers: this.getHeaders()});
     }
     removeKennel(id: number) {
-        return this.http.delete(`${ApiUrl}/Kennel/${id}` , {header: this.getHeaders()});
+        return this.http.delete(`${ApiUrl}/Kennel/${id}` , {headers: this.getHeaders()});
     }
     private getHeaders(){
         return new HttpHeaders().set('Authoriziation', `Bearer ${localStorage. getItem('id_token')}`);

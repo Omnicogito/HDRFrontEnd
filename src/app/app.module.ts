@@ -21,14 +21,17 @@ import { DoggoEditComponent } from './components/doggos/doggo-edit/doggo-edit.co
 import { DoggoDeleteComponent } from './components/doggos/doggo-delete/doggo-delete.component';
 import { DoggoService } from './services/doggo.service';
 import { PersonService } from './services/person.service';
+import { KennelService } from './services/kennel.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { KennelCreateComponent } from './components/kennels/kennel-create/kennel-create.component';
+import { KennelDeleteComponent } from './components/kennels/kennel-delete/kennel-delete.component';
+import { KennelDetailComponent } from './components/kennels/kennel-detail/kennel-detail.component';
+import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    PersonComponent,
-    KennelComponent,
     RegisterComponent,
     PersonCreateComponent,
     PersonDetailComponent,
@@ -40,6 +43,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DoggoEditComponent,
     DoggoDeleteComponent,
     DoggoComponent,
+    KennelComponent,
+    KennelCreateComponent,
+    KennelDeleteComponent,
+    KennelDetailComponent,
+    KennelEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +64,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   providers: [
     DoggoService,
-    PersonService
+    PersonService,
+    KennelService
   ],
   bootstrap: [AppComponent]
 })
