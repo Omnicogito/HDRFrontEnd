@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "person-detail.component.scss"
+        "human-detail.component.scss"
     ],
     "names": [],
-    "file": "person-detail.component.css"
+    "file": "human-detail.component.css"
 }

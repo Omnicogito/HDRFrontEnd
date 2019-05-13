@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "person-create.component.scss"
+        "human-create.component.scss"
     ],
     "names": [],
-    "file": "person-create.component.css"
+    "file": "human-create.component.css"
 }

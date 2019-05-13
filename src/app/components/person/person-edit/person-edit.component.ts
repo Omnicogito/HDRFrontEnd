@@ -1,27 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { Person } from 'src/app/models/person';
+import { human } from 'src/app/models/human';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
-import { PersonService } from 'src/app/services/person.service';
+import { humanService } from 'src/app/services/human.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-person-edit',
-  templateUrl: './person-edit.component.html',
-  styleUrls: ['./person-edit.component.scss']
+  selector: 'app-human-edit',
+  templateUrl: './human-edit.component.html',
+  styleUrls: ['./human-edit.component.scss']
 })
-export class PersonEditComponent implements OnInit {
+export class humanEditComponent implements OnInit {
 
-  person: Person;
+  human: human;
 
-  editPersonForm: FormGroup;
+  edithumanForm: FormGroup;
   constructor(private form: FormBuilder,
-              private personService: PersonService,
+              private humanService: humanService,
               private ar: ActivatedRoute,
               private router: Router) {
 
     this.ar.paramMap.subscribe(p => {
-      this.personService.getPerson(p.get('id')).subscribe((singlePerson: Person) => {
-        this.person = singlePerson;
+      this.humanService.gethuman(p.get('id')).subscribe((singlehuman: human) => {
+        this.human = singlehuman;
         this.createForm();
       });
     });
@@ -31,17 +31,17 @@ export class PersonEditComponent implements OnInit {
   }
 
   createForm() {
-    this.editPersonForm = this.form.group({
-      HumanID: new FormControl(this.person.HumanId),
-      FullName: new FormControl(this.person.FullName),
-      Address: new FormControl(this.person.Address),
-      Phone: new FormControl(this.person.Phone),
-      Email: new FormControl(this.person.Phone),
-      DoggoName: new FormControl(this.person.DoggoName)
+    this.edithumanForm = this.form.group({
+      HumanID: new FormControl(this.human.HumanId),
+      FullName: new FormControl(this.human.FullName),
+      Address: new FormControl(this.human.Address),
+      Phone: new FormControl(this.human.Phone),
+      Email: new FormControl(this.human.Phone),
+      DoggoName: new FormControl(this.human.DoggoName)
     });
   }
   onSubmit(form) {
-    const updatePerson: Person = {
+    const updatehuman: human = {
       HumanId: form.value.HumanID,
       FullName: form.value.FullName,
       Address: form.value.Address,
@@ -49,8 +49,8 @@ export class PersonEditComponent implements OnInit {
       Email: form.value.Email,
       DoggoName: form.value.DoggoName
     };
-    this.personService.updatePerson(updatePerson).subscribe(d => {
-      this.router.navigate(['/person']);
+    this.humanService.updatehuman(updatehuman).subscribe(d => {
+      this.router.navigate(['/human']);
     });
   }
 }

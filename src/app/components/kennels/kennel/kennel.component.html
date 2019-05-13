@@ -7,7 +7,7 @@
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
     <ng-container matColumnDef="KennelNumber">
-      <mat-header-cell *matHeaderCellDef>Number of Kennel</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Number of Kennel</mat-header-cell>
       <mat-cell *matCellDef="let Kennel"> {{kennel.KennelNumber}} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="Size">
