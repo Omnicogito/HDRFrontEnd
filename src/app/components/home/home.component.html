@@ -1,3 +1,92 @@
+<h1>Welcome to Human and Doggo Retreat</h1>
+<h3>The bestest Kennel for your Doggos in town!</h3>
+
+<div>
+    <h4>About Us</h4>
+    <!-- start slipsum code -->
+
+    <p>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go
+        someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in
+        the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to
+        you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first
+        motherfucker to get shot. You understand? </p>
+
+    <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.
+        Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for
+        he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great
+        vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name
+        is the Lord when I lay My vengeance upon thee. </p>
+
+    <p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine.
+        You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.
+        We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are
+        connected, you and I. We're on the same curve, just on opposite ends. </p>
+
+    <!-- end slipsum code -->
+</div>
+
+<div>
+    <br>
+<h2>Would you like to know more??</h2>
+
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+
+  <h5 *ngIf="success">Your form is Valid!!</h5>
+
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+    <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+      <div *ngIf="messageForm.controls.name.errors.required">Your name is required, bro.</div>
+    </div>
+  </label>
+
+  <label>
+      Email:
+      <input type="text" formControlName="email">
+      <div *ngIf="submitted && messageForm.controls.email.errors" class="error">
+        <div *ngIf="messageForm.controls.email.errors.required">Your email is required, bro.</div>
+      </div>
+    </label>
+
+    <label>
+        Interest:
+        <input type="text" formControlName="interest">
+        <div *ngIf="submitted && messageForm.controls.interest.errors" class="error">
+          <div *ngIf="messageForm.controls.interest.errors.required">Please provide interest, bro.</div>
+        </div>
+      </label>
+
+  <label>
+    Message:
+    <textarea formControlName="message"></textarea>
+    <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
+      <div *ngIf="messageForm.controls.message.errors.required">A message is required</div>
+    </div>
+  </label>
+
+  
+
+    
+
+      <input type="submit" value="Send Message" class="cta">
+
+      <div *ngIf="submitted" class="results">
+        <strong>Name:</strong>
+        <span>{{ messageForm.controls.name.value }}</span>
+
+        <strong>Message:</strong>
+        <span>{{ messageForm.controls.message.value }}</span>
+
+        <strong>Email:</strong>
+        <span>{{ messageForm.controls.email.value }}</span>
+
+        <strong>Interest:</strong>
+        <span>{{ messageForm.controls.interest.value }}</span>
+      </div>
+
+</form>
+</div>
 
 
 
@@ -5,7 +94,6 @@
 
 
 
-
-
-
-<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=12175%20Visionary%20Way%2C%20Fishers%2C%20IN%2046038&key=AIzaSyCAxVQRZxlGtESfuTCJ4Hix8ioHJA-l4_M" allowfullscreen></iframe>
+<iframe width="300" height="300" frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?q=12175%20Visionary%20Way%2C%20Fishers%2C%20IN%2046038&key=AIzaSyCAxVQRZxlGtESfuTCJ4Hix8ioHJA-l4_M"
+    allowfullscreen></iframe>
