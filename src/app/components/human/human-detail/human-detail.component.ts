@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
-import { human } from 'src/app/models/human';
-import { humanService } from 'src/app/services/human.service';
+import { Human } from 'src/app/models/human';
+import { HumanService } from 'src/app/services/human.service';
 @Component({
   selector: 'app-human-detail',
   templateUrl: './human-detail.component.html',
   styleUrls: ['./human-detail.component.scss']
 })
-export class humanDetailComponent implements OnInit {
+export class HumanDetailComponent implements OnInit {
 
-  human: human;
+  human: Human;
 
-  constructor(private _activatedRoute: ActivatedRoute, private _humanService: humanService) { }
+  constructor(private _activatedRoute: ActivatedRoute, private _humanService: HumanService) { }
   
   ngOnInit() {
     this._activatedRoute.paramMap.subscribe(routeData => {
-      this._humanService.gethuman(routeData.get('id')).subscribe((singlehuman: human) => {
+      this._humanService.gethuman(routeData.get('id')).subscribe((singlehuman: Human) => {
         this.human = singlehuman;
       });
       console.log(routeData);

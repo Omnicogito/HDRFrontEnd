@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { human } from '../models/human';
+import { Human } from '../models/human';
 
 const ApiUrl = 'https://humananddoggo.azurewebsites.net/api';
 
 @Injectable({
   providedIn: 'root'
 })
-export class humanService {
+export class HumanService {
   constructor(private http: HttpClient) { }
 
   gethumans() {
@@ -20,11 +20,11 @@ export class humanService {
     return this.http.get(`${ApiUrl}/Human/${id}`, { headers: this.getHeaders() });
   }
 
-  createhuman(human: human) {
+  createhuman(human: Human) {
     return this.http.post(`${ApiUrl}/Human`, human, { headers: this.getHeaders() });
   }
 
-  updatehuman(human: human) {
+  updatehuman(human: Human) {
     return this.http.put(`${ApiUrl}/Human`, human, { headers: this.getHeaders() });
   }
   deletehuman(id: number) {

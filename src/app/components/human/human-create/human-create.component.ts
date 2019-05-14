@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
-import { humanService } from 'src/app/services/human.service';
+import { HumanService } from 'src/app/services/human.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,11 +8,11 @@ import { Router } from '@angular/router';
   templateUrl: './human-create.component.html',
   styleUrls: ['./human-create.component.scss']
 })
-export class humanCreateComponent implements OnInit {
+export class HumanCreateComponent implements OnInit {
 
   humanForm: FormGroup;
 
-  constructor(private humanService: humanService, private form: FormBuilder, private router: Router) {
+  constructor(private humanService: HumanService, private form: FormBuilder, private router: Router) {
     this.createForm();
   }
 

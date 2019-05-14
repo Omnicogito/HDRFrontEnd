@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { human } from 'src/app/models/human';
+import { Human } from 'src/app/models/human';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
-import { humanService } from 'src/app/services/human.service';
+import { HumanService } from 'src/app/services/human.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -9,18 +9,18 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './human-edit.component.html',
   styleUrls: ['./human-edit.component.scss']
 })
-export class humanEditComponent implements OnInit {
+export class HumanEditComponent implements OnInit {
 
-  human: human;
+  human: Human;
 
   edithumanForm: FormGroup;
   constructor(private form: FormBuilder,
-              private humanService: humanService,
+              private humanService: HumanService,
               private ar: ActivatedRoute,
               private router: Router) {
 
     this.ar.paramMap.subscribe(p => {
-      this.humanService.gethuman(p.get('id')).subscribe((singlehuman: human) => {
+      this.humanService.gethuman(p.get('id')).subscribe((singlehuman: Human) => {
         this.human = singlehuman;
         this.createForm();
       });
@@ -41,7 +41,7 @@ export class humanEditComponent implements OnInit {
     });
   }
   onSubmit(form) {
-    const updatehuman: human = {
+    const updatehuman: Human = {
       HumanId: form.value.HumanID,
       FullName: form.value.FullName,
       Address: form.value.Address,

@@ -1,4 +1,4 @@
-export interface human {
+export interface Human {
     HumanId?: number;
     FullName: string;
     Address: string;
