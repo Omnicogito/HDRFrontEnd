@@ -16,7 +16,8 @@ export class KennelDetailComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(routeData => {
-      this.kennelService.getKennel(routeData.get('id')).subscribe((singleKennel: Kennel) => {this.kennel = singleKennel});
+      this.kennelService.getKennel(routeData.get('id')).subscribe((singleKennel: Kennel) => {this.kennel = singleKennel;
+      });
     });
   }
 

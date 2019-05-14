@@ -28,7 +28,7 @@ export class KennelCreateComponent implements OnInit {
 
   onSubmit(){
     this.kennelService.createKennel(this.kennelForm.value)
-    .subscripe(data => {this.router.navigate(['/kennel']);
+    .subscribe(data => {this.router.navigate(['/kennel']);
   });
   }
 }

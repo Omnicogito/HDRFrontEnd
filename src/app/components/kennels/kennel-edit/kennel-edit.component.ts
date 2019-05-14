@@ -14,9 +14,9 @@ export class KennelEditComponent implements OnInit {
   kennel: Kennel;
 
   editKennelForm: FormGroup;
-  constructor(private form: FormBuilder, 
-              private kennelService: KennelService, 
-              private ar: ActivatedRoute, 
+  constructor(private form: FormBuilder,
+              private kennelService: KennelService,
+              private ar: ActivatedRoute,
               private router: Router) {
     this.ar.paramMap.subscribe(p => {
       this.kennelService.getKennel(p.get('id')).subscribe((singleKennel: Kennel) => {
@@ -32,12 +32,11 @@ export class KennelEditComponent implements OnInit {
   createForm() {
     this.editKennelForm = this.form.group({
       KennelID: new FormControl(this.kennel.KennelID),
-      KennelNumber: new FormControl(this.kennel.KennelNubmer),
+      KennelNumber: new FormControl(this.kennel.KennelNumber),
       Size: new FormControl(this.kennel.Size),
       Occupied: new FormControl(this.kennel.Occupied),
       DoggoID: new FormControl(this.kennel.DoggoID),
       DoggoName: new FormControl(this.kennel.DoggoName),
-      HumanID: new FormControl(this.kennel.HumanID),
       FullName: new FormControl(this.kennel.FullName)
     });
   }
@@ -45,12 +44,11 @@ export class KennelEditComponent implements OnInit {
   onSubmit(form) {
     const updateKennel: Kennel = {
       KennelID: form.value.KennelID,
-      KennelNubmer: form.value.KennelNubmer,
+      KennelNumber: form.value.KennelNumber,
       Size: form.value.Size,
       Occupied: form.value.Occupied,
       DoggoID: form.value.DoggoID,
       DoggoName: form.value.DoggoName,
-      HumanID: form.value.HumanID,
       FullName: form.value.FullName
     };
     this.kennelService.updateKennel(updateKennel).subscribe(d => {

@@ -12,13 +12,13 @@ export class KennelComponent implements OnInit {
 
   constructor(private kennelService: KennelService) { }
 
-  columnNames = ['Kennel Number','Size','Occupied','Doggo ID','Doggo Name','Human ID','Owner Name'];
+  columnName = ['details', 'KennelNumber', 'Size', 'Occupied', 'DoggoID', 'DoggoName', 'FullName' , 'buttons'];
 
   dataSource: MatTableDataSource<Kennel>;
 
   ngOnInit() {
-    this.kennelService.getKennels().subscribe((kennels: Kennel[])=>
-    {this.dataSource=new MatTableDataSource<Kennel>(kennels);});
+    this.kennelService.getKennels().subscribe((kennels: Kennel[]) => {this.dataSource = new MatTableDataSource<Kennel>(kennels);
+    });
   }
 
 }

@@ -7,6 +7,12 @@
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
+    <ng-container matColumnDef='details'>
+      <mat-header-cell *matHeaderCellDef class='matColumnSize'></mat-header-cell>
+      <mat-cell *matCellDef='let person' routerLink='/human/detail/{{person.HumanId}}'><i
+          class='material-icons'>library_books</i></mat-cell>
+    </ng-container>
+    
     <ng-container matColumnDef="FullName">
     <mat-header-cell *matHeaderCellDef class="matColumnSize">First and Last Name</mat-header-cell>
     <mat-cell *matCellDef="let human">{{human.FullName}}</mat-cell>
@@ -35,5 +41,6 @@
       <i class="material-icons" routerLink="/human/delete/{{human.HumanID}}">delete</i>
     </mat-cell>
   </ng-container>
+
   </mat-table>
 </div>
