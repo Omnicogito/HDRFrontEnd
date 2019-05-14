@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Doggo } from '../models/doggo';
 
-const ApiUrl = 'http://localhost:50915/api';
+const ApiUrl = 'https://humananddoggo.azurewebsites.net/api';
 
 @Injectable({
   providedIn: 'root'
