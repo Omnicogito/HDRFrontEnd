@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonService } from '../../services/person.service';
-import { Person } from 'src/app/models/person';
+import { humanService } from '../../services/human.service';
+import { human } from 'src/app/models/human';
 import {MatTableDataSource} from '@angular/material';
 
 @Component({
-  selector: 'app-person-index',
-  templateUrl: './person.component.html',
-  styleUrls: ['./person.component.scss']
+  selector: 'app-human-index',
+  templateUrl: './human.component.html',
+  styleUrls: ['./human.component.scss']
 })
-export class PersonComponent implements OnInit {
+export class humanComponent implements OnInit {
 
-  constructor(private personService: PersonService) { }
+  constructor(private humanService: humanService) { }
 
   columnNames = [ 'details', 'FullName', 'Address', 'Phone', 'Email', 'DoggoName', 'buttons'];
 
-  dataSource: MatTableDataSource<Person>;
+  dataSource: MatTableDataSource<human>;
 
   ngOnInit() {
-    this.personService.getPersons().subscribe((person: Person[]) => {
-      this.dataSource = new MatTableDataSource<Person>(person);
+    this.humanService.gethumans().subscribe((human: human[]) => {
+      this.dataSource = new MatTableDataSource<human>(human);
     });
   }
 }

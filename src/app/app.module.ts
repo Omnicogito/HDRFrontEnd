@@ -5,22 +5,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
-import { PersonComponent } from './components/person/person.component';
+import { humanComponent } from './components/human/human.component';
 import { KennelComponent } from './components/kennels/kennel/kennel.component';
 import { DoggoComponent } from './components/doggos/doggo/doggo.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
-import { PersonCreateComponent } from './components/person/person-create/person-create.component';
-import { PersonDetailComponent } from './components/person/person-detail/person-detail.component';
-import { PersonEditComponent } from './components/person/person-edit/person-edit.component';
-import { PersonDeleteComponent } from './components/person/person-delete/person-delete.component';
+import { humanCreateComponent } from './components/human/human-create/human-create.component';
+import { humanDetailComponent } from './components/human/human-detail/human-detail.component';
+import { humanEditComponent } from './components/human/human-edit/human-edit.component';
+import { humanDeleteComponent } from './components/human/human-delete/human-delete.component';
 import { DoggoCreateComponent } from './components/doggos/doggo-create/doggo-create.component';
 import { DoggoDetailComponent } from './components/doggos/doggo-detail/doggo-detail.component';
 import { DoggoEditComponent } from './components/doggos/doggo-edit/doggo-edit.component';
 import { DoggoDeleteComponent } from './components/doggos/doggo-delete/doggo-delete.component';
 import { DoggoService } from './services/doggo.service';
-import { PersonService } from './services/person.service';
+import { humanService } from './services/human.service';
 import { KennelService } from './services/kennel.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { KennelCreateComponent } from './components/kennels/kennel-create/kennel-create.component';
@@ -32,12 +32,14 @@ import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edi
     AppComponent,
     HeaderComponent,
     HomeComponent,
+    HumanComponent,
+    KennelComponent,
     RegisterComponent,
-    PersonCreateComponent,
-    PersonDetailComponent,
-    PersonEditComponent,
-    PersonDeleteComponent,
-    PersonComponent,
+    HumanCreateComponent,
+    HumanDetailComponent,
+    HumanEditComponent,
+    HumanDeleteComponent,
+    HumanComponent,
     DoggoCreateComponent,
     DoggoDetailComponent,
     DoggoEditComponent,
@@ -64,7 +66,7 @@ import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edi
   ],
   providers: [
     DoggoService,
-    PersonService,
+    HumanService
     KennelService
   ],
   bootstrap: [AppComponent]

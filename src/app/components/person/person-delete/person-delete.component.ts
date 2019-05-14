@@ -1,28 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonService } from 'src/app/services/person.service';
+import { humanService } from 'src/app/services/human.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Person } from 'src/app/models/person';
+import { human } from 'src/app/models/human';
 
 @Component({
-  selector: 'app-person-delete',
-  templateUrl: './person-delete.component.html',
-  styleUrls: ['./person-delete.component.scss']
+  selector: 'app-human-delete',
+  templateUrl: './human-delete.component.html',
+  styleUrls: ['./human-delete.component.scss']
 })
-export class PersonDeleteComponent implements OnInit {
-  person: Person;
+export class humanDeleteComponent implements OnInit {
+  human: human;
 
-  constructor(private personService: PersonService, private ar: ActivatedRoute, private router: Router) {
+
+  constructor(private humanService: humanService, private ar: ActivatedRoute, private router: Router) {
     this.ar.paramMap.subscribe(p => {
-      this.personService.getPerson(p.get('id')).subscribe((singlePerson: Person) => {
-        this.person = singlePerson;
+      this.humanService.gethuman(p.get('id')).subscribe((singlehuman: human) => {
+        this.human = singlehuman;
+
       });
     });
    }
 
   ngOnInit() {
   }
-onDelete() {
-  this.personService.deletePerson(this.person.HumanId).subscribe(() => {
+
+onDelete(){
+  this.humanService.deletehuman(this.human.HumanId).subscribe(() => {
     this.router.navigate(['/human']);
   });
 }

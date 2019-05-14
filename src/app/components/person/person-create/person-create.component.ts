@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
-import { PersonService } from 'src/app/services/person.service';
+import { humanService } from 'src/app/services/human.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-person-create',
-  templateUrl: './person-create.component.html',
-  styleUrls: ['./person-create.component.scss']
+  selector: 'app-human-create',
+  templateUrl: './human-create.component.html',
+  styleUrls: ['./human-create.component.scss']
 })
-export class PersonCreateComponent implements OnInit {
+export class humanCreateComponent implements OnInit {
 
-  personForm: FormGroup;
+  humanForm: FormGroup;
 
-  constructor(private personService: PersonService, private form: FormBuilder, private router: Router) {
+  constructor(private humanService: humanService, private form: FormBuilder, private router: Router) {
     this.createForm();
   }
 
@@ -20,7 +20,7 @@ export class PersonCreateComponent implements OnInit {
   }
 
   createForm() {
-    this.personForm = this.form.group({
+    this.humanForm = this.form.group({
       FullName: new FormControl(),
       Address: new FormControl(),
       Phone: new FormControl(),
@@ -30,8 +30,8 @@ export class PersonCreateComponent implements OnInit {
   }
 
   onSubmit() {
-    this.personService.createPerson(this.personForm.value).subscribe(data => {
-      this.router.navigate(['/person']);
+    this.humanService.createhuman(this.humanForm.value).subscribe(data => {
+      this.router.navigate(['/human']);
     });
   }
 }
