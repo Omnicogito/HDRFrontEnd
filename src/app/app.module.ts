@@ -10,11 +10,11 @@ import { KennelComponent } from './components/kennels/kennel/kennel.component';
 import { DoggoComponent } from './components/doggos/doggo/doggo.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
 import { HumanCreateComponent } from './components/human/human-create/human-create.component';
 import { HumanDetailComponent } from './components/human/human-detail/human-detail.component';
 import { HumanEditComponent } from './components/human/human-edit/human-edit.component';
 import { HumanDeleteComponent } from './components/human/human-delete/human-delete.component';
+import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatCheckboxModule  } from '@angular/material';
 import { DoggoCreateComponent } from './components/doggos/doggo-create/doggo-create.component';
 import { DoggoDetailComponent } from './components/doggos/doggo-detail/doggo-detail.component';
 import { DoggoEditComponent } from './components/doggos/doggo-edit/doggo-edit.component';
@@ -58,6 +58,7 @@ import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edi
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
+    MatCheckboxModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
