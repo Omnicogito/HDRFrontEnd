@@ -10,7 +10,7 @@ import { KennelComponent } from './components/kennels/kennel/kennel.component';
 import { DoggoComponent } from './components/doggos/doggo/doggo.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatCheckboxModule  } from '@angular/material';
 import { humanCreateComponent } from './components/human/human-create/human-create.component';
 import { humanDetailComponent } from './components/human/human-detail/human-detail.component';
 import { humanEditComponent } from './components/human/human-edit/human-edit.component';
@@ -59,6 +59,7 @@ import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edi
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
+    MatCheckboxModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
