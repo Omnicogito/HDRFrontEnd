@@ -14,7 +14,7 @@ export class HumanDeleteComponent implements OnInit {
 
   constructor(private humanService: HumanService, private ar: ActivatedRoute, private router: Router) {
     this.ar.paramMap.subscribe(p => {
-      this.humanService.gethuman(p.get('id')).subscribe((singlehuman: Human) => {
+      this.humanService.getHuman(p.get('id')).subscribe((singlehuman: Human) => {
         this.human = singlehuman;
 
       });
@@ -25,7 +25,7 @@ export class HumanDeleteComponent implements OnInit {
   }
 
 onDelete(){
-  this.humanService.deletehuman(this.human.HumanId).subscribe(() => {
+  this.humanService.deleteHuman(this.human.HumanID).subscribe(() => {
     this.router.navigate(['/human']);
   });
 }

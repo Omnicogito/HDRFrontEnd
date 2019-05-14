@@ -17,7 +17,7 @@ export class HumanComponent implements OnInit {
   dataSource: MatTableDataSource<Human>;
 
   ngOnInit() {
-    this.humanService.gethumans().subscribe((human: Human[]) => {
+    this.humanService.getHumans().subscribe((human: Human[]) => {
       this.dataSource = new MatTableDataSource<Human>(human);
     });
   }

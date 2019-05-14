@@ -30,7 +30,7 @@ export class HumanCreateComponent implements OnInit {
   }
 
   onSubmit() {
-    this.humanService.createhuman(this.humanForm.value).subscribe(data => {
+    this.humanService.createHuman(this.humanForm.value).subscribe(data => {
       this.router.navigate(['/human']);
     });
   }

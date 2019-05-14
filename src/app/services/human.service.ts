@@ -10,24 +10,23 @@ const ApiUrl = 'https://humananddoggo.azurewebsites.net/api';
 export class HumanService {
   constructor(private http: HttpClient) { }
 
-  gethumans() {
+  getHumans() {
     return this.http.get(`${ApiUrl}/Human` , { headers: this.getHeaders() });
   }
 
-
-  gethuman(id: string) {
+  getHuman(id: string) {
 
     return this.http.get(`${ApiUrl}/Human/${id}`, { headers: this.getHeaders() });
   }
 
-  createhuman(human: Human) {
+  createHuman(human: Human) {
     return this.http.post(`${ApiUrl}/Human`, human, { headers: this.getHeaders() });
   }
 
-  updatehuman(human: Human) {
+  updateHuman(human: Human) {
     return this.http.put(`${ApiUrl}/Human`, human, { headers: this.getHeaders() });
   }
-  deletehuman(id: number) {
+  deleteHuman(id: number) {
     return this.http.delete(`${ApiUrl}/Human/${id}`, { headers: this.getHeaders() });
   }
 

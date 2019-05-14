@@ -11,11 +11,11 @@ export class HumanDetailComponent implements OnInit {
 
   human: Human;
 
-  constructor(private _activatedRoute: ActivatedRoute, private _humanService: HumanService) { }
+  constructor(private activatedRoute: ActivatedRoute, private humanService: HumanService) { }
   
   ngOnInit() {
-    this._activatedRoute.paramMap.subscribe(routeData => {
-      this._humanService.gethuman(routeData.get('id')).subscribe((singlehuman: Human) => {
+    this.activatedRoute.paramMap.subscribe(routeData => {
+      this.humanService.getHuman(routeData.get('id')).subscribe((singlehuman: Human) => {
         this.human = singlehuman;
       });
       console.log(routeData);

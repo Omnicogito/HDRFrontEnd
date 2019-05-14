@@ -14,7 +14,7 @@ import { HumanCreateComponent } from './components/human/human-create/human-crea
 import { HumanDetailComponent } from './components/human/human-detail/human-detail.component';
 import { HumanEditComponent } from './components/human/human-edit/human-edit.component';
 import { HumanDeleteComponent } from './components/human/human-delete/human-delete.component';
-import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatCheckboxModule  } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatCheckboxModule, MatRadioModule  } from '@angular/material';
 import { DoggoCreateComponent } from './components/doggos/doggo-create/doggo-create.component';
 import { DoggoDetailComponent } from './components/doggos/doggo-detail/doggo-detail.component';
 import { DoggoEditComponent } from './components/doggos/doggo-edit/doggo-edit.component';
@@ -63,10 +63,11 @@ import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edi
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatRadioModule,
   ],
   providers: [
     DoggoService,
-    HumanService
+    HumanService,
     KennelService
   ],
   bootstrap: [AppComponent]

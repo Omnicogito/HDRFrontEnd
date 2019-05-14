@@ -1,5 +1,5 @@
 export interface Human {
-    HumanId?: number;
+    HumanID?: number;
     FullName: string;
     Address: string;
     Phone: string;

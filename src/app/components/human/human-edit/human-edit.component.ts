@@ -20,7 +20,7 @@ export class HumanEditComponent implements OnInit {
               private router: Router) {
 
     this.ar.paramMap.subscribe(p => {
-      this.humanService.gethuman(p.get('id')).subscribe((singlehuman: Human) => {
+      this.humanService.getHuman(p.get('id')).subscribe((singlehuman: Human) => {
         this.human = singlehuman;
         this.createForm();
       });
@@ -32,7 +32,7 @@ export class HumanEditComponent implements OnInit {
 
   createForm() {
     this.edithumanForm = this.form.group({
-      HumanID: new FormControl(this.human.HumanId),
+      HumanID: new FormControl(this.human.HumanID),
       FullName: new FormControl(this.human.FullName),
       Address: new FormControl(this.human.Address),
       Phone: new FormControl(this.human.Phone),
@@ -42,14 +42,14 @@ export class HumanEditComponent implements OnInit {
   }
   onSubmit(form) {
     const updatehuman: Human = {
-      HumanId: form.value.HumanID,
+      HumanID: form.value.HumanID,
       FullName: form.value.FullName,
       Address: form.value.Address,
       Phone: form.value.Phone,
       Email: form.value.Email,
       DoggoName: form.value.DoggoName
     };
-    this.humanService.updatehuman(updatehuman).subscribe(d => {
+    this.humanService.updateHuman(updatehuman).subscribe(d => {
       this.router.navigate(['/human']);
     });
   }
