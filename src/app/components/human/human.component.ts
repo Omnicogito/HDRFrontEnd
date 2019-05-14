@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { humanService } from '../../services/human.service';
-import { human } from 'src/app/models/human';
+import { HumanService } from '../../services/human.service';
+import { Human } from 'src/app/models/human';
 import {MatTableDataSource} from '@angular/material';
 
 @Component({
@@ -8,17 +8,17 @@ import {MatTableDataSource} from '@angular/material';
   templateUrl: './human.component.html',
   styleUrls: ['./human.component.scss']
 })
-export class humanComponent implements OnInit {
+export class HumanComponent implements OnInit {
 
-  constructor(private humanService: humanService) { }
+  constructor(private humanService: HumanService) { }
 
   columnNames = [ 'details', 'FullName', 'Address', 'Phone', 'Email', 'DoggoName', 'buttons'];
 
-  dataSource: MatTableDataSource<human>;
+  dataSource: MatTableDataSource<Human>;
 
   ngOnInit() {
-    this.humanService.gethumans().subscribe((human: human[]) => {
-      this.dataSource = new MatTableDataSource<human>(human);
+    this.humanService.gethumans().subscribe((human: Human[]) => {
+      this.dataSource = new MatTableDataSource<Human>(human);
     });
   }
 }

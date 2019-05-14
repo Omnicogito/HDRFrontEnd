@@ -14,6 +14,10 @@ import { humanCreateComponent } from './components/human/human-create/human-crea
 import { humanEditComponent } from './components/human/human-edit/human-edit.component';
 import { humanDetailComponent } from './components/human/human-detail/human-detail.component';
 import { humanDeleteComponent } from './components/human/human-delete/human-delete.component';
+import { KennelCreateComponent } from './components/kennels/kennel-create/kennel-create.component';
+import { KennelDetailComponent } from './components/kennels/kennel-detail/kennel-detail.component';
+import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edit.component';
+import { KennelDeleteComponent } from './components/kennels/kennel-delete/kennel-delete.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -23,11 +27,8 @@ const routes: Routes = [
     { path: 'edit/:id', component: humanEditComponent},
     { path: 'detail/:id', component: humanDetailComponent},
     { path: 'delete/:id', component: humanDeleteComponent}
+  ]},
 
-import { KennelCreateComponent } from './components/kennels/kennel-create/kennel-create.component';
-import { KennelDetailComponent } from './components/kennels/kennel-detail/kennel-detail.component';
-import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edit.component';
-import { KennelDeleteComponent } from './components/kennels/kennel-delete/kennel-delete.component';
 
 
   {path: 'doggo', children: [
