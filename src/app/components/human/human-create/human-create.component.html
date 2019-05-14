@@ -1,7 +1,7 @@
-<h1>Create Person</h1>
+<h1>Create human</h1>
 <hr>
 
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="personForm">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="humanForm">
   <div>
     <div>
       <mat-form-field>
@@ -32,4 +32,4 @@
   <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Human</button>
 </form>
 
-<a mat-button routerLink="/person">Back to List</a>
+<a mat-button routerLink="/human">Back to List</a>

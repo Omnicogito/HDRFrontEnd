@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "person-edit.component.scss"
+        "human-delete.component.scss"
     ],
     "names": [],
-    "file": "person-edit.component.css"
+    "file": "human-delete.component.css"
 }
