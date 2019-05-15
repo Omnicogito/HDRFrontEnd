@@ -19,14 +19,14 @@ export class HumanDeleteComponent implements OnInit {
 
       });
     });
-   }
+  }
 
   ngOnInit() {
   }
 
-onDelete(){
-  this.humanService.deleteHuman(this.human.HumanID).subscribe(() => {
-    this.router.navigate(['/human']);
-  });
-}
+  toDelete() {
+    this.humanService.deleteHuman(this.human.HumanID).subscribe(() => {
+      this.router.navigate(['/human']);
+    });
+  }
 }
