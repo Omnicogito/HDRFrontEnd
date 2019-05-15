@@ -17,7 +17,12 @@
       </div>
       <div>
         <mat-form-field>
-          <input matInput placeholder="Size" formControlName="Size" type="Size" required [value]="doggo.Size" />
+          <mat-label>Size of Doggo</mat-label>
+          <mat-select [(ngModel)]="selectedValue" name="size">
+            <mat-option *ngFor="let size of sizes" [value]="size.value">
+              {{size.viewValue}}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
       </div>
       <div>
@@ -46,7 +51,7 @@
 
       <div>
         <mat-form-field>
-          <input matInput placeholder="Image Address" formControlName="Image" type="Image"
+          <input matInput placeholder="Image Address" formControlName="Image" type="text"
             [value]="doggo.Image" />
         </mat-form-field>
       </div>

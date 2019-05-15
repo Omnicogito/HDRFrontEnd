@@ -5,6 +5,10 @@ import { Router } from '@angular/router';
 import { HumanService } from 'src/app/services/human.service';
 import { Human } from 'src/app/models/human';
 
+export interface Size {
+  value: number;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-doggo-create',
@@ -15,6 +19,14 @@ import { Human } from 'src/app/models/human';
 export class DoggoCreateComponent implements OnInit {
   doggoForm: FormGroup;
   humans: Human[];
+  selectedValue: string;
+
+  sizes: Size[] = [
+    {value: 0, viewValue: 'Small'},
+    {value: 1, viewValue: 'Medium'},
+    {value: 2, viewValue: 'Large'},
+    {value: 3, viewValue: 'X-Large'},
+  ];
 
   constructor(private doggoService: DoggoService, private form: FormBuilder, private router: Router, private humanService: HumanService) {
     this.createForm();
