@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "kennel-detail.component.scss"
+    ],
+    "names": [],
+    "file": "kennel-detail.component.css"
+}
