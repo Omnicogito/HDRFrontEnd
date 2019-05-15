@@ -12,7 +12,7 @@ export class KennelComponent implements OnInit {
 
   constructor(private kennelService: KennelService) { }
 
-  columnName = ['details', 'KennelNumber', 'Size', 'Occupied', 'DoggoID', 'DoggoName', 'FullName' , 'buttons'];
+  columnName = ['details', 'KennelNumber', 'Size', 'Occupied', 'DoggoID', 'DoggoName','HumanID', 'FullName' , 'buttons'];
 
   dataSource: MatTableDataSource<Kennel>;
 

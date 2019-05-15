@@ -37,6 +37,7 @@ export class KennelEditComponent implements OnInit {
       Occupied: new FormControl(this.kennel.Occupied),
       DoggoID: new FormControl(this.kennel.DoggoID),
       DoggoName: new FormControl(this.kennel.DoggoName),
+      HumanID: new FormControl(this.kennel.HumanID),
       FullName: new FormControl(this.kennel.FullName)
     });
   }
