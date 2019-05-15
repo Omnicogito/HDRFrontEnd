@@ -5,6 +5,6 @@ export interface Kennel {
     Occupied: boolean;
     DoggoID: string;
     DoggoName: string;
-    //HumanID: string;
+    HumanID: string;
     FullName: string;
 }
