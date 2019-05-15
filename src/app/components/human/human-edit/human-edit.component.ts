@@ -36,7 +36,7 @@ export class HumanEditComponent implements OnInit {
       FullName: new FormControl(this.human.FullName),
       Address: new FormControl(this.human.Address),
       Phone: new FormControl(this.human.Phone),
-      Email: new FormControl(this.human.Phone),
+      Email: new FormControl(this.human.Email),
       DoggoName: new FormControl(this.human.DoggoName)
     });
   }

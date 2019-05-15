@@ -3,7 +3,6 @@ import { Doggo } from 'src/app/models/doggo';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { DoggoService } from 'src/app/services/doggo.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { formArrayNameProvider } from '@angular/forms/src/directives/reactive_directives/form_group_name';
 
 @Component({
   selector: 'app-doggo-edit',
@@ -19,13 +18,14 @@ export class DoggoEditComponent implements OnInit {
               private doggoService: DoggoService,
               private ar: ActivatedRoute,
               private router: Router) {
-      this.ar.paramMap.subscribe(p => {
-        this.doggoService.getDoggo(p.get('id')).subscribe((singleDoggo: Doggo) => {
-          this.doggo = singleDoggo;
-          this.createForm();
-        });
+
+    this.ar.paramMap.subscribe(p => {
+      this.doggoService.getDoggo(p.get('id')).subscribe((singledoggo: Doggo) => {
+        this.doggo = singledoggo;
+        this.createForm();
       });
-     }
+    });
+  }
 
   ngOnInit() {
   }
@@ -36,31 +36,34 @@ export class DoggoEditComponent implements OnInit {
       DoggoName: new FormControl(this.doggo.DoggoName),
       Breed: new FormControl(this.doggo.Breed),
       Size: new FormControl(this.doggo.Size),
-      HumanID: new FormControl(this.doggo.HumanID),
       DoggoFriendly: new FormControl(this.doggo.DoggoFriendly),
       PeopleFriendly: new FormControl(this.doggo.PeopleFriendly),
       SpecialNeeds: new FormControl(this.doggo.SpecialNeeds),
       Age: new FormControl(this.doggo.Age),
-      Image: new FormControl(this.doggo.Image)
+      Image: new FormControl(this.doggo.Image),
     });
   }
-
   onSubmit(form) {
-    const updateDoggo: Doggo = {
+    if (this.editDoggoForm.value.DoggoFriendly !== true) { } { this.editDoggoForm.value.DoggoFriendly = false; }
+
+    if (this.editDoggoForm.value.PeopleFriendly !== true) { this.editDoggoForm.value.PeopleFriendly = false; }
+
+    const updatedoggo: Doggo = {
       DoggoID: form.value.DoggoID,
       DoggoName: form.value.DoggoName,
       Breed: form.value.Breed,
       Size: form.value.Size,
-      HumanID: form.value.HumanID,
       DoggoFriendly: form.value.DoggoFriendly,
       PeopleFriendly: form.value.PeopleFriendly,
       SpecialNeeds: form.value.SpecialNeeds,
       Age: form.value.Age,
-      Image: form.value.Image
+      Image: form.value.Image,
     };
-    this.doggoService.updateDoggo(updateDoggo).subscribe(d => {
+
+
+
+    this.doggoService.updateDoggo(updatedoggo).subscribe(d => {
       this.router.navigate(['/doggo']);
     });
   }
-
 }

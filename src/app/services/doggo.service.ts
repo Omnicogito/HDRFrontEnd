@@ -24,7 +24,7 @@ export class DoggoService {
   }
 
   updateDoggo(doggo: Doggo) {
-    return this.http.put(`${ApiUrl}/Doggo` , doggo, { headers: this.getHeaders() });
+    return this.http.put(`${ApiUrl}/Doggo/` , doggo, { headers: this.getHeaders() });
   }
 
   removeDoggo( id: number) {

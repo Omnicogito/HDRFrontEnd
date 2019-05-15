@@ -9,7 +9,6 @@ import { Doggo } from 'src/app/models/doggo';
   styleUrls: ['./doggo-delete.component.scss']
 })
 export class DoggoDeleteComponent implements OnInit {
-
   doggo: Doggo;
 
   constructor(private doggoService: DoggoService, private ar: ActivatedRoute, private router: Router) {
@@ -20,13 +19,12 @@ export class DoggoDeleteComponent implements OnInit {
     });
    }
 
+   ngOnInit() {
+  }
+
   onDelete() {
     this.doggoService.removeDoggo(this.doggo.DoggoID).subscribe(() => {
       this.router.navigate(['/doggo']);
     });
   }
-
-  ngOnInit() {
-  }
-
 }

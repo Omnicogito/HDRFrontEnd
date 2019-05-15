@@ -3,7 +3,6 @@ export interface Doggo {
     DoggoName: string;
     Breed: string;
     Size: string;
-    HumanID: string;
     DoggoFriendly: boolean;
     PeopleFriendly: boolean;
     SpecialNeeds: string;

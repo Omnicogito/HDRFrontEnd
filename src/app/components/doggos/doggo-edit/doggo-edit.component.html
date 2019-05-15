@@ -1,54 +1,40 @@
-<h1>Edit a Doggo!</h1>>
+<h1>Edit a Doggo!</h1>
 <hr>
 
 <div *ngIf="doggo">
   <form #f="ngForm" (ngSubmit)='onSubmit(f)' [formGroup]="editDoggoForm">
     <div>
-      <div hidden>
-        <mat-form-field>
-          <input matInput placeholder="DoggoID" formControlName="DoggoID" type="DoggoID" required [value]="doggo.DoggoID" />
-        </mat-form-field>
-      </div>
-      
       <div>
         <mat-form-field>
-          <input matInput placeholder="DoggoName" formControlName="DoggoName" type="DoggoName" required [value]="doggo.DoggoName" />
+          <input matInput placeholder="DoggoName" formControlName="DoggoName" type="text" required
+            [value]="doggo.DoggoName" />
         </mat-form-field>
       </div>
-
       <div>
         <mat-form-field>
           <input matInput placeholder="Breed" formControlName="Breed" type="Breed" required [value]="doggo.Breed" />
         </mat-form-field>
       </div>
-
       <div>
         <mat-form-field>
           <input matInput placeholder="Size" formControlName="Size" type="Size" required [value]="doggo.Size" />
         </mat-form-field>
       </div>
-
       <div>
-        <mat-form-field>
-          <input matInput placeholder="Human" formControlName="HumanID" type="HumanID" required [value]="doggo.HumanID" />
-        </mat-form-field>
+        <label>
+          <span>Is Doggo Friendly??</span><input type="checkbox" formControlName="DoggoFriendly" />
+        </label>
+      </div>
+      <div>
+        <label>
+          <span>Is People Friendly??</span><input type="checkbox" formControlName="PeopleFriendly" />
+        </label>
       </div>
 
       <div>
         <mat-form-field>
-          <input mat-checkbox  formControlName="DoggoFriendly" type="DoggoFriendly" required [value]="doggo.DoggoFriendly" />
-        </mat-form-field>
-      </div>
-
-      <div>
-        <mat-form-field>
-          <input mat-checkbox  formControlName="PeopleFriendly" type="PeopleFriendly" required [value]="doggo.PeopleFriendly" />
-        </mat-form-field>
-      </div>
-
-      <div>
-        <mat-form-field>
-          <input matInput placeholder="Special Needs" formControlName="SpecialNeeds" type="SpecialNeeds" required [value]="doggo.SpecialNeeds" />
+          <input matInput placeholder="Special Needs" formControlName="SpecialNeeds" type="SpecialNeeds" required
+            [value]="doggo.SpecialNeeds" />
         </mat-form-field>
       </div>
 
@@ -60,13 +46,14 @@
 
       <div>
         <mat-form-field>
-          <input matInput placeholder="Image Address" formControlName="Image" type="Image" required [value]="doggo.Image" />
+          <input matInput placeholder="Image Address" formControlName="Image" type="Image"
+            [value]="doggo.Image" />
         </mat-form-field>
       </div>
 
     </div>
-    <a mat-raised-button class="nav-btn" type="submit">Save Changes</a>
+    <button mat-raised-button class="nav-btn" color="" type="submit">Save</button>
   </form>
 </div>
 
-<a mat-button routerLink="/doggos">Back to List</a>
+<a mat-button routerLink="/doggo">Back to List</a>

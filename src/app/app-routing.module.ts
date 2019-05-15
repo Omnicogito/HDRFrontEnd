@@ -33,8 +33,8 @@ const routes: Routes = [
   {path: 'doggo', children: [
     { path: '', component: DoggoComponent },
     { path: 'create', component: DoggoCreateComponent},
-    { path: 'detail/:id', component: DoggoDetailComponent},
     { path: 'edit/:id', component: DoggoEditComponent},
+    { path: 'detail/:id', component: DoggoDetailComponent},
     { path: 'delete/:id', component: DoggoDeleteComponent}
   ]},
 
