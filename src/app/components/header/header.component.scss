@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:800|Quicksand');
+
+$colors: (
+    primary: #3BA63B,
+    primary-light: lighten(#3BA63B, 40%),
+    primary-dark: darken(#3BA63B, 40%),
+    secondary: #D0904A,
+);
+
+@function color($color-name){
+    @return map-get($colors, $color-name )
+}
+
+header {
+    background: color(primary);
+
+    .logo {
+        font-family: "Nanum+Gothic:800";
+        font-weight: bold;
+    }
+
+    nav {
+        justify-self: right;
+    
+        ul {
+            list-style-type: none;
+            margin: 0; padding: 0;
+
+            li {
+                float: left;
+
+                a {
+                    padding: 1.5em;
+                    text-transform: uppercase;
+                    font-size: .8em;
+
+                    &:hover {
+                        background: color(primary-light);
+                    }
+                }
+            }
+        }
+    }
+}

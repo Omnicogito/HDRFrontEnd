@@ -1,0 +1,33 @@
+<h1>Remove</h1>
+<h4>Really want to do this? There's no going back.</h4>
+
+<hr>
+<div *ngIf="kennel">
+  <div>
+    <label for="">KennelID</label>
+    <span>{{kennel.KennelID}}</span>
+  </div>
+  <div>
+    <label for="">Number of Kennel</label>
+    <span>{{kennel.KennelNumber}}</span>
+  </div>
+  <div>
+    <label for="">Size of Kennel/Doggo</label>
+    <span>{{kennel.Size}}</span>
+  </div>
+  <div>
+    <label for="">Is it Occupied?</label>
+    <span>{{kennel.Occupied}}</span>
+  </div>
+  <div>
+      <label for="">Name of Doggo</label>
+      <span>{{kennel.DoggoName}}</span>
+  </div>
+  <div>
+    <label for="">Name of Doggo Owner</label>
+    <span>{{kennel.FullName}}</span>
+  </div>
+</div>
+
+<button mat-button color="warn" (click)="onDelete()">Thanos Snap</button>
+<button mat-button color="primary" routerLink="/kennel">Back to List</button>

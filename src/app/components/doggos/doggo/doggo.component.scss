@@ -1,0 +1,14 @@
+$colors: (
+    primary: #3BA63B,
+    primary-light: lighten(#3BA63B, 40%),
+    primary-dark: darken(#3BA63B, 40%),
+    secondary: #D0904A,
+);
+
+@function color($color-name){
+    @return map-get($colors, $color-name )
+}
+
+.a{
+    color: color(secondary)
+};

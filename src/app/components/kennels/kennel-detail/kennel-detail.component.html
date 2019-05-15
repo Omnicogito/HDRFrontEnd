@@ -1,0 +1,26 @@
+<h1>Kennels</h1>
+
+<hr>
+<div *ngIf="kennel">
+  <div>
+    <label for="">Kennel ID:</label>
+    <span>{{kennel.KennelID}}</span>
+  </div>
+  <div>
+    <label for="">Kennel Number:</label>
+    <span>{{kennel.KennelNubmer}}</span>
+  </div>
+  <div>
+    <label for="">Occupied:</label>
+    <span>{{kennel.Occupied}}</span>
+  </div>
+  <div>
+    <label for="">Doggo Name:</label>
+    <span>{{kennel.DoggoName}}</span>
+  </div>
+  <div>
+    <label for="">Owner Name:</label>
+    <span>{{kennel.FullName}}</span>
+  </div>
+</div>
+<a mat-button routerLink="/kennel">Back to List</a>

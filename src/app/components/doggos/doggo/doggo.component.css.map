@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAWA,AAAA,EAAE,CAAA;EACE,KAAK,EARM,OAAO;CASrB",
+    "sources": [
+        "doggo.component.scss"
+    ],
+    "names": [],
+    "file": "doggo.component.css"
+}

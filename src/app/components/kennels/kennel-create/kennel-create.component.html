@@ -1,0 +1,24 @@
+<h1>Kennel Setup</h1>
+<hr>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="kennelForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="KennelNumber" formControlName="KennelNumber" type="text" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Size" formControlName="Size" type="text" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <label>
+        <span>Kennel Occupied?</span><input type="checkbox" formControlName="Occupied"/>
+      </label>
+    </div>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Kennel</button>
+</form>
+
+<a mat-button routerLink="/kennel">Back to List</a>

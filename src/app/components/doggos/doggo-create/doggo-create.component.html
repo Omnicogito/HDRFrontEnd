@@ -1,0 +1,69 @@
+<h1>Register a Doggo</h1>
+<hr>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="doggoForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="DoggoName" formControlName="DoggoName" type="text" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Breed" formControlName="Breed" type="text" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Size of Doggo</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="size">
+          <mat-option *ngFor="let size of sizes" [value]="size.value">
+            {{size.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-select placeholder="Human ID" formControlName="HumanID" required>
+          <mat-option *ngFor="let humanId of humans" [value]="humanId.HumanID">{{humanId.FullName}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-select placeholder="Human" formControlName="HumanName" required>
+          <mat-option *ngFor="let fullName of humans" [value]="fullName.FullName">{{fullName.FullName}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <label>
+        <span>Is Doggo Friendly??</span><input type="checkbox" formControlName="DoggoFriendly" />
+      </label>
+    </div>
+    <div>
+      <label>
+        <span>Is People Friendly??</span><input type="checkbox" formControlName="PeopleFriendly" />
+      </label>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Special Needs" formControlName="SpecialNeeds" type="text" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Age" formControlName="Age" type="text" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Image Address" formControlName="Image" type="text" />
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Register a Doggo</button>
+</form>
+
+<a mat-button routerLink="/doggo">Back to List</a>
