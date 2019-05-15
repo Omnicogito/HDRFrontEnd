@@ -18,11 +18,20 @@
         <input matInput placeholder="Size" formControlName="Size" type="text" required />
       </mat-form-field>
     </div>
-    <div>
-      <mat-form-field>
-        
-      </mat-form-field>
-    </div>
+    <div >
+        <mat-form-field>
+          <mat-select placeholder="Human ID" formControlName="HumanID" required>
+            <mat-option *ngFor="let humanId of humans" [value]="humanId.HumanID">{{humanId.HumanID}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-select placeholder="Human" formControlName="HumanName" required>
+            <mat-option *ngFor="let fullName of humans" [value]="fullName.FullName">{{fullName.FullName}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
     <div>
      <label>
        <span>Is Doggo Friendly??</span><input type="checkbox" formControlName="DoggoFriendly"/>
