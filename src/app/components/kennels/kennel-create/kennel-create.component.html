@@ -4,17 +4,27 @@
   <div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="KennelNumber" formControlName="KennelNumber" type="text" required/>
+        <input matInput placeholder="DoggoID" formControlName="DoggoID" type="text" required />
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Size" formControlName="Size" type="text" required/>
+        <input matInput placeholder="KennelNumber" formControlName="KennelNumber" type="text" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Size of Doggo</mat-label>
+        <mat-select formControlName="Size">
+          <mat-option *ngFor="let size of size" [value]="size">
+            {{size}}
+          </mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
     <div>
       <label>
-        <span>Kennel Occupied?</span><input type="checkbox" formControlName="Occupied"/>
+        <span>Kennel Occupied?</span><input type="checkbox" formControlName="Occupied" />
       </label>
     </div>
   </div>

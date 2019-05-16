@@ -4,15 +4,18 @@ import {Kennel} from '../../../models/kennel';
 import { MatTableDataSource } from '@angular/material';
 
 @Component({
-  selector: 'app-kennel',
+  selector: 'app-kennel-index',
   templateUrl: './kennel.component.html',
   styleUrls: ['./kennel.component.scss']
 })
 export class KennelComponent implements OnInit {
+  size: string[] = [
+    'small','medium','large','Xlarge'
+  ]
 
   constructor(private kennelService: KennelService) { }
 
-  columnName = ['details', 'KennelNumber', 'Size', 'Occupied', 'DoggoID', 'DoggoName','HumanID', 'FullName' , 'buttons'];
+  columnNames = ['details', 'KennelNumber', 'Size', 'Occupied', 'DoggoID', 'buttons'];
 
   dataSource: MatTableDataSource<Kennel>;
 

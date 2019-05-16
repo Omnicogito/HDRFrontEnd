@@ -6,34 +6,43 @@
     <div>
       <div hidden>
         <mat-form-field>
-          <input matInput placeholder="KennelID" formControlName="KennelID" type="hidden" required [value]="kennel.KennelID"/>
+          <input matInput placeholder="KennelID" formControlName="KennelID" type="text" required [value]="kennel.KennelID"/>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field>
-          <input matInput placeholder="Kennel Number" formControlName="KennelNumber" type="number" required [value]="kennel.KennelNumber"/>
+          <input matInput placeholder="Kennel Number" formControlName="KennelNumber" type="text" required [value]="kennel.KennelNumber"/>
         </mat-form-field>
       </div>
       <div>
-        <mat-form-field>
-          <input matInput placeholder="Occupied?" formControlName="Occupied" type="checkbox" required [value]="kennel.Occupied"/>
-        </mat-form-field>
+          <mat-form-field>
+            <mat-label>Size of Kennel</mat-label>
+            <mat-select formControlName="Size">
+              <mat-option *ngFor="let size of size" [value]="size">
+                {{size}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      <div>
+        <label>
+          <span>Occupied</span><input  type="checkbox" formControlName="Occupied" />
+        </label>
       </div>
       <div>
-        <mat-form-field>
-          <input matInput placeholder="Doggo ID" formControlName="DoggoID" type="Number" required [value]="kennel.DoggoID"/>
-        </mat-form-field>
-      </div>
+          <mat-form-field>
+            <mat-select placeholder="Doggo ID" formControlName="DoggoID" required>
+              <mat-option *ngFor="let doggoId of doggos" [value]="doggoId.DoggoID">{{doggoId.DoggoName}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
       <div>
-        <mat-form-field>
-          <input matInput placeholder="Doggo Name" formControlName="DoggoName" type="text" required [value]="kennel.DoggoName"/>
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field>
-          <input matInput placeholder="First and Last Name" formControlName="FullName" type="text" required [value]="kennel.FullName"/>
-        </mat-form-field>
-      </div>
+          <mat-form-field>
+            <mat-select placeholder="Human ID" formControlName="HumanID" required>
+              <mat-option *ngFor="let humanId of humans" [value]="humanId.HumanID">{{humanId.FullName}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
     </div>
     <button mat-raised-button class="nav-btn" color="" type="submit">Update</button>
   </form>
