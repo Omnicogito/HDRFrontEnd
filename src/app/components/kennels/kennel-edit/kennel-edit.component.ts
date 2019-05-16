@@ -18,8 +18,8 @@ export class KennelEditComponent implements OnInit {
   doggos: Doggo[];
   kennel: Kennel;
   size: string[] = [
-    'small','medium','large','Xlarge'
-  ]
+    'small', 'medium', 'large', 'Xlarge'
+  ];
 
   editKennelForm: FormGroup;
   constructor(private form: FormBuilder,
@@ -39,7 +39,7 @@ export class KennelEditComponent implements OnInit {
   ngOnInit() {
     this.humanService.getHumans().subscribe((humans: Human[]) => {
       this.humans = humans; });
-      this.doggoService.getDoggos().subscribe((doggos: Doggo[]) => {
+    this.doggoService.getDoggos().subscribe((doggos: Doggo[]) => {
         this.doggos = doggos; });
   }
 

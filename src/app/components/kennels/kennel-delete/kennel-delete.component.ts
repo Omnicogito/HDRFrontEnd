@@ -23,7 +23,7 @@ export class KennelDeleteComponent implements OnInit {
   ngOnInit() {
   }
 
-  OnDelete(){
+  OnDelete() {
     this.kennelService.removeKennel(this.kennel.KennelID).subscribe(() => {
       this.router.navigate(['/kennel']);
     });
