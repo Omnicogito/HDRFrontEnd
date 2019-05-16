@@ -15,7 +15,7 @@ export class KennelComponent implements OnInit {
 
   constructor(private kennelService: KennelService) { }
 
-  columnNames = ['details', 'KennelNumber', 'Size', 'Occupied', 'DoggoID', 'buttons'];
+  columnNames = ['details', 'KennelNumber', 'Size', 'Occupied', 'DoggoName', 'buttons'];
 
   dataSource: MatTableDataSource<Kennel>;
 

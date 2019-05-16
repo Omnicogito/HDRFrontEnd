@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HumanService } from 'src/app/services/human.service';
 import { DoggoService } from '../../../services/doggo.service';
 import { Human } from 'src/app/models/human';
-import {Doggo} from 'src/app/models/doggo';
+import { Doggo } from 'src/app/models/doggo';
 
 @Component({
   selector: 'app-kennel-edit',
