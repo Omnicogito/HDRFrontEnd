@@ -4,10 +4,10 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { DoggoService } from 'src/app/services/doggo.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
-export interface Size {
-  value: number;
-  viewValue: string;
-}
+// export interface Size {
+//   value: number;
+//   viewValue: string;
+// }
 
 @Component({
   selector: 'app-doggo-edit',
@@ -17,14 +17,11 @@ export interface Size {
 export class DoggoEditComponent implements OnInit {
 
   doggo: Doggo;
-  selectedValue: string;
+  //selectedValue: string;
 
-  sizes: Size[] = [
-    {value: 0, viewValue: 'Small'},
-    {value: 1, viewValue: 'Medium'},
-    {value: 2, viewValue: 'Large'},
-    {value: 3, viewValue: 'X-Large'},
-  ];
+  size: string[] = [
+    'small','medium','large','Xlarge'
+  ]
 
 
 

@@ -18,9 +18,9 @@
       <div>
         <mat-form-field>
           <mat-label>Size of Doggo</mat-label>
-          <mat-select [(ngModel)]="selectedValue" name="size">
-            <mat-option *ngFor="let size of sizes" [value]="size.value">
-              {{size.viewValue}}
+          <mat-select formControlName="Size">
+            <mat-option *ngFor="let size of size" [value]="size">
+              {{size}}
             </mat-option>
           </mat-select>
         </mat-form-field>
