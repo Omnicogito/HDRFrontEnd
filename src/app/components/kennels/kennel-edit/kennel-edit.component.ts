@@ -57,7 +57,7 @@ export class KennelEditComponent implements OnInit {
   }
 
   onSubmit(form) {
-    if (this.editKennelForm.value.Occupied !== true) { }{ this.editKennelForm.value.Occupied = false; }
+    if (this.editKennelForm.value.Occupied !== true) { this.editKennelForm.value.Occupied = false; }
 
     const updateKennel: Kennel = {
       KennelID: form.value.KennelID,
