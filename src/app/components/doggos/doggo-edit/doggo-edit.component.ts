@@ -17,11 +17,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class DoggoEditComponent implements OnInit {
 
   doggo: Doggo;
-  //selectedValue: string;
 
   size: string[] = [
-    'small','medium','large','Xlarge'
-  ]
+    'small', 'medium', 'large', 'Xlarge'
+  ];
 
 
 
