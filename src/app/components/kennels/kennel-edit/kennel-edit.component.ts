@@ -68,6 +68,7 @@ export class KennelEditComponent implements OnInit {
       DoggoName: form.value.DoggoName,
       FullName: form.value.FullName,
       HumanID: form.value.HumanID,
+
     };
     this.kennelService.updateKennel(updateKennel).subscribe(d => {
       this.router.navigate(['/kennel']);
