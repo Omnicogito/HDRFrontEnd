@@ -10,8 +10,8 @@ import { MatTableDataSource } from '@angular/material';
 })
 export class KennelComponent implements OnInit {
   size: string[] = [
-    'small','medium','large','Xlarge'
-  ]
+    'small', 'medium', 'large', 'Xlarge'
+  ];
 
   constructor(private kennelService: KennelService) { }
 

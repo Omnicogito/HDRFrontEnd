@@ -59,7 +59,7 @@ export class DoggoCreateComponent implements OnInit {
   // });
 
   onSubmit() {
-        if (this.doggoForm.value.DoggoFriendly !== true) { }{ this.doggoForm.value.DoggoFriendly = false; }
+        if (this.doggoForm.value.DoggoFriendly !== true) { this.doggoForm.value.DoggoFriendly = false; }
 
         if (this.doggoForm.value.PeopleFriendly !== true) { this.doggoForm.value.PeopleFriendly = false; }
 

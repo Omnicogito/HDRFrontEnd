@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Kennel } from 'src/app/models/kennel';
-import { ActivatedRoute, RouterPreloader } from '@angular/router';
+import { ActivatedRoute, } from '@angular/router';
 import { KennelService } from 'src/app/services/kennel.service';
 
 @Component({

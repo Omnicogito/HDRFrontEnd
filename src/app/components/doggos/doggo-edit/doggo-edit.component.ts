@@ -56,7 +56,7 @@ export class DoggoEditComponent implements OnInit {
     });
   }
   onSubmit(form) {
-    if (this.editDoggoForm.value.DoggoFriendly !== true) { } { this.editDoggoForm.value.DoggoFriendly = false; }
+    if (this.editDoggoForm.value.DoggoFriendly !== true) { this.editDoggoForm.value.DoggoFriendly = false; }
 
     if (this.editDoggoForm.value.PeopleFriendly !== true) { this.editDoggoForm.value.PeopleFriendly = false; }
 
