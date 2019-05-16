@@ -10,7 +10,7 @@
     <ng-container matColumnDef='details'>
       <mat-header-cell *matHeaderCellDef class='matColumnSize'></mat-header-cell>
       <mat-cell *matCellDef='let kennel' routerLink='/kennel/detail/{{kennel.KennelID}}'><i
-          class='material-icons'>description</i></mat-cell>
+          class='material-icons'>library_books</i></mat-cell>
     </ng-container>
     
     <ng-container matColumnDef="KennelNumber">
@@ -28,17 +28,17 @@
       <mat-cell *matCellDef="let kennel"> {{kennel.Occupied}} </mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="DoggoID">
+     <ng-container matColumnDef="DoggoID">
       <mat-header-cell *matHeaderCellDef class="matColumnSize">Doggo ID</mat-header-cell>
       <mat-cell *matCellDef="let kennel"> {{kennel.DoggoID}}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="DoggoName">
-      <mat-header-cell *matHeaderCellDef class="matColumnSize">Name of Doggo</mat-header-cell>
-      <mat-cell *matCellDef="let kennel"> {{kennel.DoggoName}}  </mat-cell>
+    <!--<ng-container matColumnDef="KennelID">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">KennelID</mat-header-cell>
+      <mat-cell *matCellDef="let kennel"> {{kennel.KennelID}}  </mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="HumanID">
+     <ng-container matColumnDef="HumanID">
       <mat-header-cell *matColumnDef class="matColumnSize">Human ID</mat-header-cell>
       <mat-cell *matCellDef="let kennels"> {{kennel.HumanID}} </mat-cell>
     </ng-container>
@@ -46,13 +46,13 @@
     <ng-container matColumnDef="FullName">
       <mat-header-cell *matHeaderCellDef class="matColumnSize">First and Last Name of Owner</mat-header-cell>
       <mat-cell *matCellDef="let kennel">{{kennel.FullName}}</mat-cell>
-    </ng-container>
+    </ng-container> -->
 
     <ng-container matColumnDef="buttons">
       <mat-header-cell *matHeaderCellDef> </mat-header-cell>
       <mat-cell *matCellDef="let kennel">
-        <i mat-icon class="material-icons" routerLink="/Kennel/edit/{{kennel.KennelID}}">edit</i>
-        <i class="material-icons" routerLink="/Kennel/delete/{{kennel.KennelID}}">delete_forever</i>
+        <i mat-icon class="material-icons" routerLink="/kennel/edit/{{kennel.KennelID}}">edit</i>
+        <i class="material-icons" routerLink="/kennel/delete/{{kennel.KennelID}}">delete_forever</i>
       </mat-cell>
     </ng-container>
     
