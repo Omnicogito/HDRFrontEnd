@@ -8,8 +8,9 @@ $colors: (
 
 @function color($color-name){
     @return map-get($colors, $color-name )
-}
+};
 
-.table{
-    background-color: color(secondary-dark),
+.mat-table{
+    background-color: color(secondary-dark);
+    color: white;
 }
