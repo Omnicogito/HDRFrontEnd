@@ -23,6 +23,8 @@ export class KennelCreateComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.doggoService.getDoggos().subscribe((doggos: Doggo[]) => {
+      this.doggos = doggos; });
   }
   createForm() {
     this.kennelForm = this.form.group({
@@ -37,8 +39,7 @@ export class KennelCreateComponent implements OnInit {
 
   onSubmit() {
     if (this.kennelForm.value.Occupied !== true) { this.kennelForm.value.Occupied = false; }
-    this.doggoService.getDoggos().subscribe((doggos: Doggo[]) => {
-      this.doggos = doggos; });
+    
     this.kennelService.createKennel(this.kennelForm.value)
     .subscribe(data => {this.router.navigate(['/kennel']);
   });
