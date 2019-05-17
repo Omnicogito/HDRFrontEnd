@@ -9,6 +9,7 @@ import { MatTableDataSource } from '@angular/material';
   styleUrls: ['./kennel.component.scss']
 })
 export class KennelComponent implements OnInit {
+  
   size: string[] = [
     'small', 'medium', 'large', 'Xlarge'
   ];
