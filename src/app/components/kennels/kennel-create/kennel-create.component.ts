@@ -15,8 +15,8 @@ export class KennelCreateComponent implements OnInit {
   doggos: Doggo[];
   kennelForm: FormGroup;
   size: string[] = [
-    'small','medium','large','Xlarge'
-  ]
+    'small', 'medium', 'large', 'Xlarge'
+  ];
 
   constructor(private kennelService: KennelService, private doggoService: DoggoService, private form: FormBuilder, private router: Router) {
     this.createForm();
@@ -24,7 +24,7 @@ export class KennelCreateComponent implements OnInit {
 
   ngOnInit() {
   }
-  createForm(){
+  createForm() {
     this.kennelForm = this.form.group({
       KennelNumber: new FormControl(),
       Size: new FormControl(),
@@ -35,7 +35,7 @@ export class KennelCreateComponent implements OnInit {
     });
   }
 
-  onSubmit(){
+  onSubmit() {
     if (this.kennelForm.value.Occupied !== true) { this.kennelForm.value.Occupied = false; }
     this.doggoService.getDoggos().subscribe((doggos: Doggo[]) => {
       this.doggos = doggos; });
