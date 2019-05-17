@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DoggoService } from '../../../services/doggo.service';
-import { Doggo } from '../../../models/doggo';
+import { Doggo, Size} from '../../../models/doggo';
 import { MatTableDataSource } from '@angular/material';
 
 
@@ -11,6 +11,8 @@ import { MatTableDataSource } from '@angular/material';
 })
 export class DoggoComponent implements OnInit {
 
+  enumDisplay: string;
+  doggo: Doggo;
   constructor(private doggoService: DoggoService) { }
 
   columnNames = ['details', 'DoggoName' , 'Breed' , 'Size' , 'HumanID' , 'DoggoFriendly' , 'PeopleFriendly' , 'SpecialNeeds' , 'Age' , 'Image', 'buttons'];
@@ -19,6 +21,10 @@ export class DoggoComponent implements OnInit {
 
   ngOnInit() {
     this.doggoService.getDoggos().subscribe((doggos: Doggo[]) => {this.dataSource = new MatTableDataSource<Doggo>(doggos);
+      for (const doggo in doggos) {
+        this.enumDisplay = Size[this.dataSource.data[doggo].Size];
+        this.dataSource.data[doggo].Size = this.enumDisplay;
+      }
     });
   }
 
