@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HumanService } from 'src/app/services/human.service';
 import { DoggoService } from '../../../services/doggo.service';
 import { Human } from 'src/app/models/human';
-import {Doggo} from 'src/app/models/doggo';
+import { Doggo } from 'src/app/models/doggo';
 
 @Component({
   selector: 'app-kennel-edit',
@@ -57,7 +57,7 @@ export class KennelEditComponent implements OnInit {
   }
 
   onSubmit(form) {
-    if (this.editKennelForm.value.Occupied !== true) { }{ this.editKennelForm.value.Occupied = false; }
+    if (this.editKennelForm.value.Occupied !== true) { this.editKennelForm.value.Occupied = false; }
 
     const updateKennel: Kennel = {
       KennelID: form.value.KennelID,
