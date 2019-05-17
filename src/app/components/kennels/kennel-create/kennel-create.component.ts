@@ -39,7 +39,7 @@ export class KennelCreateComponent implements OnInit {
 
   onSubmit() {
     if (this.kennelForm.value.Occupied !== true) { this.kennelForm.value.Occupied = false; }
-    
+
     this.kennelService.createKennel(this.kennelForm.value)
     .subscribe(data => {this.router.navigate(['/kennel']);
   });

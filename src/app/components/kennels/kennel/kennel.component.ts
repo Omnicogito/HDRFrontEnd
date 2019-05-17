@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { KennelService } from '../../../services/kennel.service';
-import {Kennel} from '../../../models/kennel';
+import {Kennel, Size } from '../../../models/kennel';
 import { MatTableDataSource } from '@angular/material';
 
 @Component({
@@ -9,10 +9,11 @@ import { MatTableDataSource } from '@angular/material';
   styleUrls: ['./kennel.component.scss']
 })
 export class KennelComponent implements OnInit {
-  
+  kennel: Kennel;
   size: string[] = [
     'small', 'medium', 'large', 'Xlarge'
   ];
+  enumDisplay: string;
 
   constructor(private kennelService: KennelService) { }
 
@@ -22,6 +23,10 @@ export class KennelComponent implements OnInit {
 
   ngOnInit() {
     this.kennelService.getKennels().subscribe((kennels: Kennel[]) => {this.dataSource = new MatTableDataSource<Kennel>(kennels);
+      for (const kennel in kennels) {
+        this.enumDisplay = Size[this.dataSource.data[kennel].Size];
+        this.dataSource.data[kennel].Size = this.enumDisplay;
+      }
     });
   }
 
