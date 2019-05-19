@@ -2,8 +2,9 @@ $colors: (
     primary: #3BA63B,
     primary-light: lighten(#3BA63B, 40%),
     primary-dark: darken(#3BA63B, 40%),
-    secondary: #D0904A,
-    secondary-dark:darken(#D0904A, 40%),
+    secondary: #2C7D7D,
+    secondary-dark:darken(#2C7D7D, 20%),
+    secondary-light:lighten(#2C7D7D, 20%),
 );
 
 @function color($color-name){
