@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router, CanActivate } from '@angular/router';
-import { UserInfo } from '../models/UserInfo';
+import { UserInfo } from '../models/userinfo';
 import { Observable } from 'rxjs';
 
 @Injectable({

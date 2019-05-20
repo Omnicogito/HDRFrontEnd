@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { RegisterUser } from '../models/RegisterUser';
+import { RegisterUser } from '../models/registeruser';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Token } from '../models/Token';
+import { Token } from '../models/token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-import { UserInfo } from '../models/UserInfo';
+import { UserInfo } from '../models/userinfo';
 
 const ApiUrl = 'https://humananddoggo.azurewebsites.net';
 
