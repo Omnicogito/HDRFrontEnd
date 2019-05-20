@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isAdmin: boolean;
+  isLoggedIn: boolean;
+
+  constructor(private auth: AuthService) { }
 
   ngOnInit() {
+    if (localStorage.getItem('user_role') === 'Admin') { this.isAdmin = true; } else { this.isAdmin = false; }
+
+    if (localStorage.getItem('id_token') != null) { this.isLoggedIn = true; } else { this.isLoggedIn = false; }
+  }
+
+  onSubmitLogout() {
+    this.auth.logout();
+    this.ngOnInit();
+
   }
 
 }
