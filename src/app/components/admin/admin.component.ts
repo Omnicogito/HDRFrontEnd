@@ -23,7 +23,7 @@ export class AdminComponent implements OnInit {
 
   constructor(private kennelService: KennelService, private ar: ActivatedRoute, private router: Router) { }
 
-  columnNames = ['details', 'KennelNumber', 'Size', 'Occupied', 'DoggoID', 'buttons']
+  columnNames = ['details', 'KennelNumber', 'Size', 'Occupied', 'DoggoID', 'buttons'];
 
   dataSource: MatTableDataSource<Kennel>;
 

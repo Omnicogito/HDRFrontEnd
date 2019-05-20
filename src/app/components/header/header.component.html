@@ -7,7 +7,8 @@
         <li><a routerLink="/human">Humans</a></li>
         <li><a routerLink="/doggo">Doggos!!!</a></li>
         <li><a routerLink="/kennel">Kennel</a></li>
-        <li><a *ngIf="isAdmin" routerLink="/admin">Admin Portal</a></li>
+        <li><a *ngIf="isAdmin" routerLink="/admin">Owner Shit</a></li>
+        <li><a *ngIf="isLoggedIn" id="logout" class="NavBarButton" (click)="onSubmitLogout()">Logout</a></li>
       </ul>
     </nav>
   </div>
