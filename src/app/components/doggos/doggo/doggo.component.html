@@ -35,12 +35,12 @@
 
     <ng-container matColumnDef='DoggoFriendly'>
       <mat-header-cell *matHeaderCellDef> Doggo Friendly </mat-header-cell>
-      <mat-cell *matCellDef='let doggo'> {{doggo.DoggoFriendly}} </mat-cell>
+      <mat-cell *matCellDef='let doggo'> {{doggo.DoggoFriendly ? 'Yes' : 'No'}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef='PeopleFriendly'>
       <mat-header-cell *matHeaderCellDef> People Friendly </mat-header-cell>
-      <mat-cell *matCellDef='let doggo'> {{doggo.PeopleFriendly}} </mat-cell>
+      <mat-cell *matCellDef='let doggo'> {{doggo.PeopleFriendly ? 'Yes' : 'No'}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef='SpecialNeeds'>

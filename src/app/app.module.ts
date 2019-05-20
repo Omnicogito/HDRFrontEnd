@@ -29,11 +29,16 @@ import { DoggoDeleteComponent } from './components/doggos/doggo-delete/doggo-del
 import { DoggoService } from './services/doggo.service';
 import { HumanService } from './services/human.service';
 import { KennelService } from './services/kennel.service';
+import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './services/auth-guard.service';
+import { RoleGuardService } from './services/role-guard.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { KennelCreateComponent } from './components/kennels/kennel-create/kennel-create.component';
 import { KennelDeleteComponent } from './components/kennels/kennel-delete/kennel-delete.component';
 import { KennelDetailComponent } from './components/kennels/kennel-detail/kennel-detail.component';
 import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edit.component';
+import { AdminComponent } from './components/admin/admin.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +61,7 @@ import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edi
     KennelDeleteComponent,
     KennelDetailComponent,
     KennelEditComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +82,10 @@ import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edi
   providers: [
     DoggoService,
     HumanService,
-    KennelService
+    KennelService,
+    AuthGuardService,
+    AuthService,
+    RoleGuardService,
   ],
   bootstrap: [AppComponent]
 })

@@ -31,7 +31,7 @@
       </div>
       <div>
           <mat-form-field>
-            <mat-select placeholder="Doggo ID" formControlName="DoggoID" required>
+            <mat-select placeholder="Doggo ID" formControlName="DoggoID">
               <mat-option *ngFor="let doggoId of doggos" [value]="doggoId.DoggoID">{{doggoId.DoggoName}}</mat-option>
             </mat-select>
           </mat-form-field>
