@@ -14,7 +14,7 @@ Back end code can be found [here](https://github.com/awolanin6611/HumanAndDoggo)
 
 ## Technology Used
 
-Angular, Typescript, Material design, SASS, Node.js, Heroku, Google API, ASP.NET WebAPI, Postman, msSQL
+Angular, Typescript, Material design, SASS, Node.js, Heroku, Google API, ASP.NET WebAPI, Postman, MS SQL
 
 ## Scope of Application
 
