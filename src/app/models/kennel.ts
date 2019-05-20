@@ -1,3 +1,7 @@
+export enum Size {
+    Small, Medium, Large, XLarge
+}
+
 export interface Kennel {
     KennelID?: number;
     KennelNumber: number;

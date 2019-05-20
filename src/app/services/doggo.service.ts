@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Doggo } from '../models/doggo';
+import { APIURL } from '../../../src/environments/environment.prod';
 
 const ApiUrl = 'https://humananddoggo.azurewebsites.net/api';
 
@@ -12,23 +13,23 @@ export class DoggoService {
   constructor(private http: HttpClient) { }
 
   getDoggos() {
-    return this.http.get(`${ApiUrl}/Doggo` , { headers: this.getHeaders() });
+    return this.http.get(`${APIURL}/Doggo` , { headers: this.getHeaders() });
   }
 
   getDoggo(id: string) {
-    return this.http.get(`${ApiUrl}/Doggo/${id}` , {headers: this.getHeaders() });
+    return this.http.get(`${APIURL}/Doggo/${id}` , {headers: this.getHeaders() });
   }
 
   createDoggo(doggo: Doggo) {
-    return this.http.post(`${ApiUrl}/Doggo`, doggo, {headers: this.getHeaders()});
+    return this.http.post(`${APIURL}/Doggo`, doggo, {headers: this.getHeaders()});
   }
 
   updateDoggo(doggo: Doggo) {
-    return this.http.put(`${ApiUrl}/Doggo/` , doggo, { headers: this.getHeaders() });
+    return this.http.put(`${APIURL}/Doggo/` , doggo, { headers: this.getHeaders() });
   }
 
   removeDoggo( id: number) {
-    return this.http.delete(`${ApiUrl}/Doggo/${id}`, { headers: this.getHeaders() });
+    return this.http.delete(`${APIURL}/Doggo/${id}`, { headers: this.getHeaders() });
   }
 
   private getHeaders() {

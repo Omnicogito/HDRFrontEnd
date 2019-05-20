@@ -1,3 +1,6 @@
+export enum Size {
+    Small, Medium, Large, XLarge
+}
 export interface Doggo {
     DoggoID?: number;
     DoggoName: string;

@@ -17,11 +17,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class DoggoEditComponent implements OnInit {
 
   doggo: Doggo;
-  //selectedValue: string;
 
   size: string[] = [
-    'small','medium','large','Xlarge'
-  ]
+    'small', 'medium', 'large', 'Xlarge'
+  ];
 
 
 
@@ -56,7 +55,7 @@ export class DoggoEditComponent implements OnInit {
     });
   }
   onSubmit(form) {
-    if (this.editDoggoForm.value.DoggoFriendly !== true) { } { this.editDoggoForm.value.DoggoFriendly = false; }
+    if (this.editDoggoForm.value.DoggoFriendly !== true) { this.editDoggoForm.value.DoggoFriendly = false; }
 
     if (this.editDoggoForm.value.PeopleFriendly !== true) { this.editDoggoForm.value.PeopleFriendly = false; }
 

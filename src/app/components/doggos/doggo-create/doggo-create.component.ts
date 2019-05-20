@@ -19,12 +19,11 @@ import { Human } from 'src/app/models/human';
 export class DoggoCreateComponent implements OnInit {
   doggoForm: FormGroup;
   humans: Human[];
-  // selectedValue: string;
 
   size: string[] = [
-    'small','medium','large','Xlarge'
-  ]
-  
+    'small', 'medium', 'large', 'Xlarge'
+  ];
+
 
   constructor(private doggoService: DoggoService, private form: FormBuilder, private router: Router, private humanService: HumanService) {
     this.createForm();
@@ -59,11 +58,11 @@ export class DoggoCreateComponent implements OnInit {
   // });
 
   onSubmit() {
-        if (this.doggoForm.value.DoggoFriendly !== true) { }{ this.doggoForm.value.DoggoFriendly = false; }
+        if (this.doggoForm.value.DoggoFriendly !== true) { this.doggoForm.value.DoggoFriendly = false; }
 
         if (this.doggoForm.value.PeopleFriendly !== true) { this.doggoForm.value.PeopleFriendly = false; }
 
-        
+
 
         this.doggoService.createDoggo(this.doggoForm.value).subscribe(data => {
       this.router.navigate(['/doggo']);
