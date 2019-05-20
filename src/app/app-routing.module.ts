@@ -17,6 +17,7 @@ import { KennelCreateComponent } from './components/kennels/kennel-create/kennel
 import { KennelDetailComponent } from './components/kennels/kennel-detail/kennel-detail.component';
 import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edit.component';
 import { KennelDeleteComponent } from './components/kennels/kennel-delete/kennel-delete.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -46,6 +47,7 @@ const routes: Routes = [
     { path: 'delete/:id', component: KennelDeleteComponent}
   ]},
   {path: 'register', component: RegisterComponent},
+  {path: 'login', component: LoginComponent},
   {path: '', component: HomeComponent}
 ];
 
