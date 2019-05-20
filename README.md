@@ -6,11 +6,11 @@ Back end code can be found [here](https://github.com/awolanin6611/HumanAndDoggo)
 
 ## Dev Team
 
-[Justin Blainbridge](github.com/Omnicogito)
+[Justin Blainbridge](https://github.com/Omnicogito)
 
-[Mannie Quinn](github.com/MannieQuinn)
+[Mannie Quinn](https://github.com/MannieQuinn)
 
-[Adam Wolanin](github.com/awolanin6611)
+[Adam Wolanin](https://github.com/awolanin6611)
 
 ## Technology Used
 
