@@ -38,6 +38,7 @@ import { KennelDeleteComponent } from './components/kennels/kennel-delete/kennel
 import { KennelDetailComponent } from './components/kennels/kennel-detail/kennel-detail.component';
 import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edit.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { AdminComponent } from './components/admin/admin.component';
     KennelDetailComponent,
     KennelEditComponent,
     AdminComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
