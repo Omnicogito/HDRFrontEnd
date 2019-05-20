@@ -8,6 +8,7 @@ import { MatTableDataSource } from '@angular/material';
   templateUrl: './kennel.component.html',
   styleUrls: ['./kennel.component.scss']
 })
+
 export class KennelComponent implements OnInit {
   kennel: Kennel;
   size: string[] = [
@@ -23,6 +24,8 @@ export class KennelComponent implements OnInit {
 
   ngOnInit() {
     this.kennelService.getKennels().subscribe((kennels: Kennel[]) => {this.dataSource = new MatTableDataSource<Kennel>(kennels);
+// tslint:disable-next-line: forin
+// tslint:disable-next-line: align
       for (const kennel in kennels) {
         this.enumDisplay = Size[this.dataSource.data[kennel].Size];
         this.dataSource.data[kennel].Size = this.enumDisplay;

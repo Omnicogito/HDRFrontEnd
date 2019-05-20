@@ -15,13 +15,15 @@ export class DoggoComponent implements OnInit {
   doggo: Doggo;
   constructor(private doggoService: DoggoService) { }
 
+// tslint:disable-next-line: max-line-length
   columnNames = ['details', 'DoggoName' , 'Breed' , 'Size' , 'HumanID' , 'DoggoFriendly' , 'PeopleFriendly' , 'SpecialNeeds' , 'Age' , 'Image', 'buttons'];
 
   dataSource: MatTableDataSource<Doggo>;
 
   ngOnInit() {
     this.doggoService.getDoggos().subscribe((doggos: Doggo[]) => {this.dataSource = new MatTableDataSource<Doggo>(doggos);
-      for (const doggo in doggos) {
+// tslint:disable-next-line: forin
+                                                                  for (const doggo in doggos) {
         this.enumDisplay = Size[this.dataSource.data[doggo].Size];
         this.dataSource.data[doggo].Size = this.enumDisplay;
       }
