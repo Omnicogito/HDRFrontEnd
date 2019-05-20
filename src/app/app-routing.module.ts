@@ -18,18 +18,18 @@ import { KennelDetailComponent } from './components/kennels/kennel-detail/kennel
 import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edit.component';
 import { KennelDeleteComponent } from './components/kennels/kennel-delete/kennel-delete.component';
 import { LoginComponent } from './components/login/login.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'human', children:[
+  {path: 'human', children: [
     { path: '', component: HumanComponent },
     { path: 'create', component: HumanCreateComponent},
     { path: 'edit/:id', component: HumanEditComponent},
     { path: 'detail/:id', component: HumanDetailComponent},
     { path: 'delete/:id', component: HumanDeleteComponent}
   ]},
-
-
+  {path: 'admin', component: AdminComponent},
 
   {path: 'doggo', children: [
     { path: '', component: DoggoComponent },
