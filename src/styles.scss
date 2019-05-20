@@ -6,9 +6,9 @@ $colors: (
     primary: #3BA63B,
     primary-light: lighten(#3BA63B, 40%),
     primary-dark: darken(#3BA63B, 40%),
-    secondary: #2C7D7D,
-    secondary-dark:darken(#2C7D7D, 20%),
-    secondary-light:lighten(#2C7D7D, 20%),
+    secondary: #01939A,
+    secondary-light: lighten(#01939A, 40%),
+    secondary-dark: darken(#01939A, 40%),
 );
 
 $padding: 15px;
@@ -34,6 +34,10 @@ body {
     font-family: 'Quicksand';
     margin: 0;
     background-color: color(secondary);
+
+    i {
+        cursor: pointer;
+    }
 
     #bg {
         clip-path: polygon(100% 0, 100% 83%, 46% 100%, 0 100%, 0 0);
