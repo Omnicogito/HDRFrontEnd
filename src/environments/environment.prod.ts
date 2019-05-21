@@ -6,9 +6,11 @@ export let APIURL = '';
 
 switch (window.location.hostname) {
   case 'humananddoggo.herokuapp.com':
+    case 'http://localhost:4200/':
     APIURL = 'https://humananddoggo.azurewebsites.net/api';
     break;
 
   default:
-    APIURL = 'http://localhost:50915';
+      APIURL = 'https://humananddoggo.azurewebsites.net/api';
+    // APIURL = 'http://localhost:50915';
 }
