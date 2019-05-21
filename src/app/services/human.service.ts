@@ -16,7 +16,7 @@ export class HumanService {
   }
 
   getHuman(id: string) {
-    return this.http.get(`${APIURL}/Human/GetHumanById?id=${id}`, { headers: this.getHeaders() });
+    return this.http.get(`${APIURL}/Human/${id}`, { headers: this.getHeaders() });
   }
 
   createHuman(human: Human) {
