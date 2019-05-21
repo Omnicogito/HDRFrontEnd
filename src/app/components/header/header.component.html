@@ -1,17 +1,11 @@
-<header>
-  <div class="container">
-    <nav>
-    <a routerLink="/" class="logo">HDR</a>
-      <ul>
-        <li><a *ngIf="isLoggedIn" routerLink="home">Home</a></li>
-        <li><a *ngIf="isLoggedIn" routerLink="/human">Humans</a></li>
-        <li><a *ngIf="isLoggedIn" routerLink="/doggo">Doggos!!!</a></li>
-        <li><a *ngIf="isLoggedIn" routerLink="/kennel">Kennel</a></li>
-        <li><a *ngIf="isAdmin" routerLink="/admin">Owner Shit</a></li>
-        <li><a *ngIf="!isLoggedIn" routerLink="/login">Login</a></li>
-        <li><a *ngIf="isLoggedIn" id="logout" class="NavBarButton" (click)="onSubmitLogout()">Logout</a></li>
-      </ul>
-      <span class='example-fill-remaining-space'></span>
-    </nav>
-  </div>
-</header>
+<mat-toolbar color='primary'>
+  <span>HDR</span>
+  <span class='example-fill-remaining-space'></span>
+  <button class="NavBarButton" routerLink="home">Home</button>
+  <button class="NavBarButton" routerLink="/human">Human</button>
+  <button class="NavBarButton" routerLink="/doggo">Doggo</button>
+  <button class="NavBarButton" routerLink="/kennel">Kennel</button>
+  <button *ngIf="isAdmin" class="NavBarButton" routerLink="/admin">Owner</button>
+  <button *ngIf="!isLoggedIn" class="NavBarButton" routerLink="/login">Logout</button>
+  <button *ngIf="isLoggedIn" id="logout" class="NavBarButton" (click)="onSubmitLogout()">Logout</button>
+</mat-toolbar>
