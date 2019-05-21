@@ -5,6 +5,7 @@ import { Token } from '../models/token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { UserInfo } from '../models/userinfo';
+import { APIURL } from 'src/environments/environment.prod';
 
 const ApiUrl = 'https://humananddoggo.azurewebsites.net';
 
@@ -25,7 +26,7 @@ export class AuthService {
   }
 
   register(regUserData: RegisterUser) {
-    return this.http.post(`${ApiUrl}/api/Account/Register`, regUserData);
+    return this.http.post(`${APIURL}/Account/Register`, regUserData);
   }
 
   login(loginInfo) {
