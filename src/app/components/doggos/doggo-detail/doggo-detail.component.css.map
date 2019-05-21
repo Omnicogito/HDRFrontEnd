@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CAAA;EACF,SAAS,EAAE,IAAI;CAClB",
+    "mappings": "AAAA,AAAA,MAAM,CAAA;EACF,SAAS,EAAE,IAAI;CAClB;;AACD,AAAA,EAAE,CAAA;EACE,WAAW,EAAE,cACjB;CAAC",
     "sources": [
         "doggo-detail.component.scss"
     ],
