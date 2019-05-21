@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:800|Quicksand');
+
 $colors: (
     primary: #3BA63B,
     primary-light: lighten(#3BA63B, 40%),
@@ -16,4 +18,9 @@ $colors: (
 .mat-table{
     background-color: color(secondary-dark);
     color: white;
+}
+
+h1{
+    font-family: 'Nanum Gothic';
+    padding: 75px;
 }

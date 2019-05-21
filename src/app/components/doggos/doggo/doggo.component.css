@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:800|Quicksand");
 .a {
   color: #D0904A;
 }
 
 .mat-table {
   color: white;
+}
+
+h1 {
+  font-family: 'Nanum Gothic';
+  padding: 75px;
 }
 /*# sourceMappingURL=doggo.component.css.map */

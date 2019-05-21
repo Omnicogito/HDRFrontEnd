@@ -1,4 +1,9 @@
 .mat-table {
   color: white;
 }
+
+h1 {
+  font-family: 'Nanum Gothic';
+  padding: 75px;
+}
 /*# sourceMappingURL=human.component.css.map */

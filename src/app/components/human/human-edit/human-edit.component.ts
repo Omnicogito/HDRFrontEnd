@@ -21,7 +21,9 @@ export class HumanEditComponent implements OnInit {
 
     this.ar.paramMap.subscribe(p => {
       this.humanService.getHuman(p.get('id')).subscribe((singlehuman: Human) => {
+        console.log(singlehuman);
         this.human = singlehuman;
+        console.log(this.human);
         this.createForm();
       });
     });
@@ -32,8 +34,8 @@ export class HumanEditComponent implements OnInit {
 
   createForm() {
     this.edithumanForm = this.form.group({
-      HumanID: new FormControl(this.human.HumanID),
       FullName: new FormControl(this.human.FullName),
+      HumanID: new FormControl(this.human.HumanID),
       Address: new FormControl(this.human.Address),
       Phone: new FormControl(this.human.Phone),
       Email: new FormControl(this.human.Email),

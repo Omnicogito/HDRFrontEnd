@@ -4,7 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HumanComponent } from './components/human/human.component';
 import { DoggoComponent } from './components/doggos/doggo/doggo.component';
 import { KennelComponent } from './components/kennels/kennel/kennel.component';
-import { RegisterComponent } from './components/register/register.component';
+// import { RegisterComponent } from './components/register/register.component';
 import { DoggoCreateComponent } from './components/doggos/doggo-create/doggo-create.component';
 import { DoggoDetailComponent } from './components/doggos/doggo-detail/doggo-detail.component';
 import { DoggoEditComponent } from './components/doggos/doggo-edit/doggo-edit.component';
@@ -17,18 +17,19 @@ import { KennelCreateComponent } from './components/kennels/kennel-create/kennel
 import { KennelDetailComponent } from './components/kennels/kennel-detail/kennel-detail.component';
 import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edit.component';
 import { KennelDeleteComponent } from './components/kennels/kennel-delete/kennel-delete.component';
+// import { LoginComponent } from './components/login/login.component';
+// import { AdminComponent } from './components/admin/admin.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'human', children:[
+  {path: 'human', children: [
     { path: '', component: HumanComponent },
     { path: 'create', component: HumanCreateComponent},
     { path: 'edit/:id', component: HumanEditComponent},
     { path: 'detail/:id', component: HumanDetailComponent},
     { path: 'delete/:id', component: HumanDeleteComponent}
   ]},
-
-
+  // {path: 'admin', component: AdminComponent},
 
   {path: 'doggo', children: [
     { path: '', component: DoggoComponent },
@@ -45,7 +46,8 @@ const routes: Routes = [
     { path: 'edit/:id', component: KennelEditComponent},
     { path: 'delete/:id', component: KennelDeleteComponent}
   ]},
-  {path: 'register', component: RegisterComponent},
+  // {path: 'register', component: RegisterComponent},
+  // {path: 'login', component: LoginComponent},
   {path: '', component: HomeComponent}
 ];
 

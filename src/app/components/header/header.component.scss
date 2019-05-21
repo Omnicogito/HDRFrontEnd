@@ -9,6 +9,15 @@ $colors: (
 
 @function color($color-name){
     @return map-get($colors, $color-name )
+};
+
+.example-fill-remaining-space{
+    flex: 1 1 auto;
+};
+
+.nav-button{
+    margin-right: 0.5em;
+    background-color: #123584;
 }
 
 header {

@@ -10,3 +10,8 @@ $colors: (
 @function color($color-name){
     @return map-get($colors, $color-name )
 };
+
+h1{
+    font-family: 'Nanum Gothic';
+    padding: 75px;
+}
