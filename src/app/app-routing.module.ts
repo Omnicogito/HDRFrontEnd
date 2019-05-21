@@ -29,7 +29,7 @@ const routes: Routes = [
     { path: 'detail/:id', component: HumanDetailComponent},
     { path: 'delete/:id', component: HumanDeleteComponent}
   ]},
-  {path: 'admin', component: AdminComponent},
+  // {path: 'admin', component: AdminComponent},
 
   {path: 'doggo', children: [
     { path: '', component: DoggoComponent },
