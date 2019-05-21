@@ -11,7 +11,7 @@ $colors: (
     @return map-get($colors, $color-name )
 };
 
-
 h1{
-    font-family: 'Nanum+Gothic'
+    font-family: 'Nanum Gothic';
+    padding: 75px;
 }

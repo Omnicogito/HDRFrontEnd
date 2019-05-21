@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAcA,AAAA,EAAE,CAAA;EACE,WAAW,EAAE,cACjB;CAAC",
+    "mappings": "AAaA,AAAA,EAAE,CAAA;EACE,WAAW,EAAE,cAAc;EAC3B,OAAO,EAAE,IAAI;CAChB",
     "sources": [
         "kennel.component.scss"
     ],
