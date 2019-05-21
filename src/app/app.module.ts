@@ -8,7 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HumanComponent } from './components/human/human.component';
 import { KennelComponent } from './components/kennels/kennel/kennel.component';
 import { DoggoComponent } from './components/doggos/doggo/doggo.component';
-import { RegisterComponent } from './components/register/register.component';
+// import { RegisterComponent } from './components/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HumanCreateComponent } from './components/human/human-create/human-create.component';
 import { HumanDetailComponent } from './components/human/human-detail/human-detail.component';
@@ -47,7 +47,7 @@ import { KennelEditComponent } from './components/kennels/kennel-edit/kennel-edi
     HomeComponent,
     HumanComponent,
     KennelComponent,
-    RegisterComponent,
+    // RegisterComponent,
     HumanCreateComponent,
     HumanDetailComponent,
     HumanEditComponent,

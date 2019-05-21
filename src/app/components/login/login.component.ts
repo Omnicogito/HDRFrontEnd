@@ -1,31 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
-import { AuthService } from '../../services/auth.service';
+// import { Component, OnInit } from '@angular/core';
+// import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+// import { AuthService } from '../../services/auth.service';
 
-@Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
-})
-export class LoginComponent implements OnInit {
+// @Component({
+//   selector: 'app-login',
+//   templateUrl: './login.component.html',
+//   styleUrls: ['./login.component.scss']
+// })
+// export class LoginComponent implements OnInit {
 
-  public loginForm: FormGroup;
+//   public loginForm: FormGroup;
 
-  constructor(private form: FormBuilder, private authService: AuthService) {
-    this.createForm();
-  }
+//   constructor(private form: FormBuilder, private authService: AuthService) {
+//     this.createForm();
+//   }
 
-  ngOnInit() {
-  }
+//   ngOnInit() {
+//   }
 
-  createForm() {
-    this.loginForm = this.form.group({
-      email: new FormControl(),
-      password: new FormControl(),
-    });
-  }
+//   createForm() {
+//     this.loginForm = this.form.group({
+//       email: new FormControl(),
+//       password: new FormControl(),
+//     });
+//   }
 
-  onSubmit() {
-    this.authService.login(this.loginForm.value);
-    }
-}
+//   onSubmit() {
+//     this.authService.login(this.loginForm.value);
+//     }
+// }
