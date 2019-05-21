@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:800|Quicksand");
+.example-fill-remaining-space {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.nav-button {
+  margin-right: 0.5em;
+  background-color: #123584;
+}
+
 header {
   background: #3BA63B;
 }
