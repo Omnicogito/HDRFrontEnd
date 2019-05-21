@@ -32,8 +32,8 @@ export class HumanEditComponent implements OnInit {
 
   createForm() {
     this.edithumanForm = this.form.group({
-      HumanID: new FormControl(this.human.HumanID),
       FullName: new FormControl(this.human.FullName),
+      HumanID: new FormControl(this.human.HumanID),
       Address: new FormControl(this.human.Address),
       Phone: new FormControl(this.human.Phone),
       Email: new FormControl(this.human.Email),
